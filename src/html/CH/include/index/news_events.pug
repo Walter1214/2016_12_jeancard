@@ -1,0 +1,20 @@
+.news_events
+    .wrap
+        .title NEWS & EVENTS
+        .swiper-container
+            .swiper-wrapper
+                -for (var x = 1; x <= 5; x++)
+                    a(href="javascript:;" target="_blank").swiper-slide
+                        img(src="~CH/desktop/index/new_2.jpg", alt="").news_img
+                        .content
+                            .date(style="background-color: #316db5;")
+                                .year 2016
+                                .month_day 11.16
+                            .article
+                                .news_type 企業動態 #{x}
+                                .news_title 啟動音樂，散播溫暖啟 動音樂啟動音樂，散播
+            .swiper-pagination
+            //- .swiper-button-prev
+            //- .swiper-button-next
+        a(href="/CH/news.html").more_btn.brown.news_more MORE
+            .more_hover()

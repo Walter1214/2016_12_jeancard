@@ -1,0 +1,74 @@
+.desktopo_value_out    
+    .desktop_value.style_1
+        .bg_list
+            .bg.bg_1
+            .bg.bg_2
+            .bg.bg_3
+            .bg.bg_4
+        .wrap
+            .title VALUE
+                .color
+                    .c_1(style="background-color: #f3a0a2;")
+                    .c_2(style="background-color: #6e99cb;")
+                    .c_3(style="background-color: #f7ac1d;")
+                    .c_4(style="background-color: #95d0bc;")
+                    .c_5(style="background-color: #dcb483;")
+            .container
+                .textOut
+                    .text 溫暖x瘋狂的創意製造
+                .subjectOut
+                    .subjectBorder
+                        .subject
+                            .text
+                                p 
+                                    i.red 設
+                                    i.red 計
+                                p 
+                                    i.blue 物
+                                    i.blue 料
+                                p 
+                                    i.green 生
+                                    i.green 產
+                                p  
+                                    i.yellow 行
+                                    i.yellow 銷
+                .descriptionOut
+                    .description
+                        p 秉持著產品來自情感、設計來自創造、素材來自天然的理念，不斷構思更動人的設計
+                        p 「Jean-Topia概念店」系統化管理30000多種的物料，是觸得到的靈感泉源及成本參考庫
+                        p 結合智慧趨勢及品質控管的先進製程中，捻入傳統工藝的細膩以及環境永續的執念
+                        p 結合魅力和效率的陳列，是風景也是提升銷售的最佳利器
+                -var arr=['','/CH/design.html','/CH/material.html','/CH/production.html','/CH/marketing.html'];
+                -for (var i = 1 ; i<= 4 ; i++)
+                    a.more_btn.white.value_more(class="more_"+i href=arr[i]) MORE
+                        .more_hover
+                .show_page
+                    -for (var i = 1 ; i<= 4 ; i++)
+                        .white_line
+                            div(class="color_" + i)
+each val,index in {1:['秉持著產品來自情感、設計來自創造、素材來自天然的理念，不斷構思更動人的設計','/CH/design.html','red','設','計'],2:['「Jean-Topia概念店」系統化管理30000多種的物料，是觸得到的靈感泉源及成本參考庫','/CH/material.html','blue','物','料'],3:['結合智慧趨勢及品質控管的先進製程中，捻入傳統工藝的細膩以及環境永續的執念','/CH/production.html','green','生','產'],4:['結合魅力和效率的陳列，是風景也是提升銷售的最佳利器','/CH/marketing.html','yellow','行','銷']}
+    div(class="mobile_value bg_"+index)
+        .wrap
+            .title VALUE
+                .color            
+                    .c_1(style="background-color: #f3a0a2;")
+                    .c_2(style="background-color: #6e99cb;")
+                    .c_3(style="background-color: #f7ac1d;")
+                    .c_4(style="background-color: #95d0bc;")
+                    .c_5(style="background-color: #dcb483;")
+
+            .container
+                .textOut
+                    .text 溫暖x瘋狂的創意製造
+                .subjectOut
+                    .subjectBorder
+                        .subject
+                            .text
+                                p
+                                    i(class=val[2])=val[3]
+                                    i(class=val[2])=val[4]
+                .descriptionOut
+                    .description
+                        p= val[0]
+                a(href=val[1]).more_btn.white MORE
+                    .more_hover

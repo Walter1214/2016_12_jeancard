@@ -1,0 +1,51 @@
+extends _master.pug
+
+block head-append
+    title Brand| Jean Cultural & Creative 
+    meta(property="og:title" content="Brand| Jean Cultural & Creative ")
+    meta(name="description" content="Upholding the belief in products from emotions, designs from creativity, and materials from nature, we develop products that are closer to consumers to inspire the purest sensation in heart with fantastic designs.")
+    meta(property="og:description" content="Upholding the belief in products from emotions, designs from creativity, and materials from nature, we develop products that are closer to consumers to inspire the purest sensation in heart with fantastic designs.")
+
+    link(rel='stylesheet', href="/asset/lib/swiper/swiper.min.css")
+    script(src="/asset/lib/swiper/swiper.min.js" defer)
+    script(src="/asset/lib/jquery.address.min.js" defer)
+
+    script(src="/asset/js/brand.js" defer)
+    link(rel="stylesheet", href="/asset/css/brand.css")
+
+block root-prepend
+
+block header
+    include ./include/master/header.pug
+    +header(['','','','ON','',''])
+block content-extend
+    include ./include/common/page_theme.pug
+    .brand
+        +page_theme("BRAND","","background-image:url('${require(`../../img/CH/desktop/brand/bg.jpg`)}')")
+        .content
+            -for (var x = 1; x <= 8; x++) 
+                -var name = 'test_' + x;
+                .style_out(id=name name=name)
+                    .style(class=(x % 2 == 0 )? 'style_2':'style_1' )
+                        .swiper-container
+                            .swiper-wrapper
+                                .swiper-slide(style="background-image:url('${require(`../../img/CH/desktop/brand/show_1.jpg`)}')")
+                                .swiper-slide(style="background-image:url('${require(`../../img/CH/desktop/brand/show_2.jpg`)}')")
+                                .swiper-slide(style="background-image:url('${require(`../../img/CH/desktop/brand/show_3.jpg`)}')")
+                                .swiper-slide(style="background-image:url('${require(`../../img/CH/desktop/brand/show_4.jpg`)}')")
+                                .swiper-slide(style="background-image:url('${require(`../../img/CH/desktop/brand/show_5.jpg`)}')")
+                            .swiper-pagination
+                            .swiper-button-next.swiper-button-white
+                            .swiper-button-prev.swiper-button-white
+                        .style_container
+                            .logo_out
+                                img(src=(x % 2 == 0 )? '~CH/desktop/brand/logo_2.png':'~CH/desktop/brand/logo_1.png', alt="")
+                                .line(style="background-color: black;")
+                            .description This is a process of elaborate design for pictures to tell emotions and communicate with people. Words are a few, but blessings are unlimited. Opening a card, the charm in beautiful and simple expressions that touches people is only found in cards. Since Jean Card was established, we incessantly search for inspirations from daily life and use comprehensive materials and simple but refined craftsmanship to re-present precious moments for each card to recollect to your memories and stories.
+                            .link
+                                a(href="javascript:;" target="_blank" name=name).link_style.know_more 了解更多
+                                p.point             
+                                a(href="javascript:;" target="_blank" name=name).link_style.shopping 線上購買
+        include ./include/common/service.pug
+        +service("not_index")   
+        include ./include/common/fixed_service.pug

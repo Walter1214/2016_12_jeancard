@@ -1,0 +1,81 @@
+.fixe_service {
+    position: fixed;
+    right: 0;
+    // top: calc(50% - 127px);
+    bottom: 10%;
+    z-index: 25;
+    background-image: url('~CH/desktop/common/fixed_btn/bg.jpg');
+    // height: 355px;
+    // width: 60px;
+    height: 205px;
+    // height: 135px;
+    width: 60px;
+    box-shadow: 0 1px 20px rgba(72, 74, 77, 0.6);
+    // font-size: 16px;
+    font-size: 12px;
+    // line-height: 20px;
+    text-align: center;
+    line-height: 18px;
+
+    @at-root .EN .fixe_service {
+        height: 106px;
+        line-height: 0;
+    }
+    @include lessThan($rwdL) {
+        display: none;
+    }
+    .container {
+        box-sizing: border-box;
+        >a {
+            @at-root .EN .fixe_service .container>a {
+                padding: 15px;
+                &:before {
+                    margin: 0 auto;
+                }
+            }
+            color: #707372;
+            display: inline-block;
+            // padding: 0 20px 35px 20px;
+            padding: 0 14px 0 14px;
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 21px;
+                height: 21px;
+                background-repeat: no-repeat;
+                // margin: 35px 0 10px 0;
+                margin: 15px auto 10px auto;
+            }
+            &:hover {
+                color: #7ba4db;
+            }
+        }
+        .business {
+            &::before {
+                background-image: url('~CH/desktop/index/service/business_btn.png');
+            }
+            &:hover {
+                &::before {
+                    background-image: url('~CH/desktop/index/service/business_btn_hover.png');
+                }
+            }
+        }
+        span.line {
+            display: inline-block;
+            height: 1px;
+            width: 20px;
+            background-color: #707372;
+            margin: 0 20px;
+        }
+        .customized {
+            &::before {
+                background-image: url('~CH/desktop/index/service/customized_btn.png');
+            }
+            &:hover {
+                &::before {
+                    background-image: url('~CH/desktop/index/service/customized_btn_hover.png');
+                }
+            }
+        }
+    }
+}

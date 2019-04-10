@@ -1,0 +1,39 @@
+mixin header(arr)
+    .header
+        .wrap
+            a(href="/CH/index.html", class="logo")
+                img(src="~CH/desktop/header/logo.svg", alt="") 
+            ul
+                li
+                    a(href="/CH/news.html" title="title" class=arr[0]) 最新消息
+                li
+                    a(href="/CH/about.html" title="title" class=arr[1]) 關於知音
+                li
+                    a(href="/CH/design.html" title="title" class=arr[2]) 創新開發
+                li
+                    a(href="/CH/brand.html" title="title" class=arr[3]) 品牌介紹
+                li
+                    a(href="/CH/customization.html" title="title" class=arr[4]) 客戶服務
+                li
+                    a(href="/CH/shoplist.html" title="title" class=arr[5]) 聯絡我們
+            .links
+                a.shopping_cart(href="javascript:;") SHOP
+                a.CH.ON(href="javascript:;") CH
+                a.EN(href="javascript:;") EN
+            a(href="javascript:;").cross
+            .lines
+                .line
+                .line
+                .line
+            .list_out
+                .list
+                    a(href="/CH/news.html") 最新消息
+                    a(href="/CH/about.html") 關於知音
+                    a(href="/CH/design.html") 創新開發
+                    a(href="/CH/brand.html") 品牌介紹
+                    a(href="/CH/customization.html") 客戶服務
+                    a(href="/CH/shoplist.html") 聯絡我們
+                    .mobile_links
+                        a.shopping_cart(href="javascript:;") SHOP
+                        a.CH.ON(href="javascript:;") CH
+                        a.EN(href="javascript:;") EN

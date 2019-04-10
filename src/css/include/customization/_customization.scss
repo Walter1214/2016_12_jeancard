@@ -1,0 +1,198 @@
+.swiper-container {
+    &.col_0 {
+        overflow: visible;
+    }
+    @include lessThan($rwdL) {
+        height: 610px;
+    }
+    &.rectangle {
+        @include lessThan($rwdL) {
+            height: 410px;
+        }
+    }
+    .swiper-button-next {
+        top: 35%;
+        @include moreThan($rwdL) {
+            display: none;
+        }
+    }
+    .swiper-button-prev {
+        top: 35%;
+        @include moreThan($rwdL) {
+            display: none;
+        }
+    }
+    .swiper-wrapper {
+        &.col_0 {
+            font-size: 0;
+            display: block;
+            height: auto;
+        }
+        .swiper-slide {
+            @include lessThan($rwdL) {}
+            &.swiper-slide-next {
+                opacity: 0.7;
+            }
+            &.swiper-slide-prev {
+                opacity: 0.7;
+            }
+            .photo {
+                position: relative;
+                height: 320px;
+                background-size: cover;
+                background-position: center;
+                @include lessThan($rwdL) {
+                    height: 480px;
+                }
+                @for $i from 1 through 6 {
+                    &.ph_1_#{$i} {
+                        background-image: url('~CH/desktop/customization/ph_1_#{$i}.jpg');
+                    }
+                }
+                @for $i from 1 through 4 {
+                    &.ph_2_#{$i} {
+                        background-image: url('~CH/desktop/customization/ph_2_#{$i}.jpg');
+                    }
+                }
+                @for $i from 1 through 5 {
+                    &.ph_3_#{$i} {
+                        background-image: url('~CH/desktop/customization/ph_3_#{$i}.jpg');
+                        @if $i==1 or $i==2 {
+                            background-size: 80%;
+                            background-repeat: no-repeat;
+                            background-color: #EDEDED;
+                            @include lessThan($rwdL) {
+                                background-size: cover;
+                                background-position: center;
+                            }
+                        }
+                    }
+                }
+                &.rectangle {
+                    @include lessThan($rwdL) {
+                        height: 270px;
+                    }
+                }
+                .company_name {
+                    color: white;
+                    width: 100%;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    box-sizing: border-box;
+                    font-size: 14px;
+                    padding-left: 10px;
+                    line-height: 25px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    @include lessThan($rwdL) {
+                        font-size: 24px;
+                        line-height: 36px;
+                    }
+                    &.green {
+                        background-color: rgba(192, 225, 214, 0.7);
+                    }
+                    &.orange {
+                        background-color: rgba(250, 196, 96, 0.7);
+                    }
+                    &.brown {
+                        background-color: rgba(231, 202, 168, 0.7);
+                    }
+                }
+            }
+            .production {
+                .production_name {
+                    font-size: 16px;
+                    line-height: 24px;
+                    font-weight: 500;
+                    padding: 10px 0;
+                    box-sizing: border-box;
+                    @include lessThan($rwdL) {
+                        font-size: 28px;
+                        line-height: 42px;
+                    }
+                }
+                .production_description {
+                    font-size: 14px;
+                    line-height: 21px;
+                    color: #707372;
+                    @include lessThan($rwdL) {
+                        display: none;
+                    }
+                    span {
+                        &.red {
+                            color: #f3737d;
+                        }
+                    }
+                }
+            }
+            &.col_3 {
+                vertical-align: top;
+                width: calc((100% - 40px) / 3);
+                display: inline-block;
+                // border: 1px solid red;
+                box-sizing: border-box;
+                height: auto;
+                margin: 0 20px 60px 0;
+                &:nth-child(3n) {
+                    margin: 0 0 60px 0;
+                }
+            }
+            &.col_5 {
+                vertical-align: top;
+                width: calc((100% - 40px) / 2);
+                display: inline-block;
+                // border: 1px solid red;
+                box-sizing: border-box;
+                height: auto;
+                margin: 0 0 60px 0;
+                &:nth-child(2) {
+                    margin: 0 0 60px 40px;
+                }
+            }
+            &.col_5_3 {
+                vertical-align: top;
+                width: calc((100% - 40px) / 3);
+                display: inline-block;
+                // border: 1px solid red;
+                box-sizing: border-box;
+                height: auto;
+                margin: 0 20px 60px 0;
+                &:nth-child(3n+5) {
+                    margin: 0 0 60px 0;
+                }
+            }
+            &.col_10 {
+                display: inline-block;
+                // border: 1px solid red;
+                box-sizing: border-box;
+                height: auto;
+                margin: 0 0 45px 0;
+                position: relative;
+                .photo {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 320px;
+                    height: 180px;
+                    display: inline-block;
+                }
+                .production {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0 0 0 340px;
+                    min-height: 180px;
+                    .production_name {
+                        width: 100%;
+                    }
+                    .production_description {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

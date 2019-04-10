@@ -1,0 +1,9 @@
+mixin page_theme(title,title_2,bg_url)
+    .page_theme_out
+        .page_theme(style= bg_url)
+            .title= title
+            .color
+                -  var c_list = ["#f3a0a2", "#6e99cb","#f7ac1d","#95d0bc","#dcb483"]
+                    each val in c_list
+                        .c(style="background-color: " + val)
+            .title_2= title_2

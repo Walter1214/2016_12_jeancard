@@ -1,0 +1,18 @@
+@import './include/master/_walter.scss';
+@import './include/master/_more_btn.scss';
+@import './include/index/_top_img.scss';
+@import './include/index/_news_events.scss';
+@import './include/index/_value.scss';
+@import './include/index/_brand.scss';
+@import './include/index/_sticky.scss';
+@import './include/common/_service.scss';
+
+body {
+    background-color: #e9e6e4;
+}
+
+.wrapper {
+    background-color: #e9e6e4;
+    position: relative;
+    z-index: 20;
+}

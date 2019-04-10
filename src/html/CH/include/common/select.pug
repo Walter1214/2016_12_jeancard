@@ -1,0 +1,8 @@
+mixin select(textarr)
+    .select_out
+        .select
+            .select_switch.default_option= textarr[0]
+            .select_switch.switchskin
+            .option_out
+                each val,index in textarr    
+                    p.select_option(data-value= index ,data-name=val[0])= val[0]

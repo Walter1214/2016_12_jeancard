@@ -1,0 +1,167 @@
+extends _master.pug
+block head-append
+    title 生產｜知音文創 Jean Cultural & Creative Co., Ltd.
+    meta(property="og:title" content="生產｜知音文創 Jean Cultural & Creative Co., Ltd.")
+    meta(name="description" content="知音文創以完善的生產設備與環保永續的生產製程，提供優良的產品與服務素質，同時重視環境與社會責任，以達到永續經營為目標。")
+    meta(property="og:description" content="知音文創以完善的生產設備與環保永續的生產製程，提供優良的產品與服務素質，同時重視環境與社會責任，以達到永續經營為目標。")
+
+    link(rel='stylesheet' href="/asset/lib/swiper/swiper.min.css")
+    script(src="/asset/lib/swiper/swiper.min.js" defer)
+    script(src="/asset/js/production.js" defer)
+    link(rel="stylesheet", href="/asset/css/production.css")
+
+block header
+    include ./include/master/header.pug
+    +header(['','','ON','','',''])
+
+block content-extend
+    include ./include/common/page_theme.pug
+    include ./include/common/page_select.pug
+    include ./include/common/select.pug
+    include ./include/master/makers_header.pug
+    .business
+        +page_theme("MAKERS","創新開發","background-image:url('${require(`../../img/CH/desktop/makers/bg.jpg`)}')")
+
+        +page_select([['設計','/CH/design.html',''],['物料','/CH/material.html',''],['生產','/CH/production.html','ON'],['行銷','/CH/marketing.html','']],false)
+        +makers_header([['設計','/CH/design.html',''],['物料','/CH/material.html',''],['生產','/CH/production.html','ON'],['行銷','/CH/marketing.html','']])
+        .main_content
+            .main_container
+                .makers_description
+                    span 知音文創不斷提昇組織應變力及競爭力，提供優良的產品與服務素質，同時重視環境與社會責任，以達到永續經營為目標。
+            .main_container
+                .main_title_out
+                    span.main_title 高效生產
+            .makers_full_screen
+                .swiper-container
+                    .swiper-wrapper  
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_1_1.jpg", alt="") 
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_1_2.jpg", alt="") 
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_1_3.jpg", alt="") 
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_1_4.jpg", alt="") 
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_1_5.jpg", alt="")
+                    .swiper-pagination
+                    .swiper-button-prev.swiper-button-black
+                    .swiper-button-next.swiper-button-black
+            .main_container
+                .makers_container
+                    .makers_rol_6.top
+                        .main_icon 完善的生產設備
+                        span 多樣化的印刷方式，包含五色UV、四色印刷機、數位印刷機、紙膠帶塗布機、以及其他各式特殊印刷機設備；專業生產加工設備，如車床、各式CNC加工機台、木工開料及成型加工機台、電繡機、雷射機、自動砸型機、數位成形切割機…等大型生產機器。全方位生產機具，開創產品的無限可能。
+                    .makers_rol_6.top    
+                        .main_icon 現代化生產製程
+                        span 開發與生產流程的系統化，從設計開發、物料應用、成本控制、生產管理，所有程序以獨家建置的ERP系統控制進度與產能，在客戶需求與成本控管間取得平衡，竭力滿足客戶需求。整合流程規劃包含從訂單管理、庫存管理、應收、付帳款管理、會計帳務、製作管理、人事薪資管理、生產管理、供應鏈管理、生產線自動派工執行、加工機台電子化、遙控製造系統等各項作業。此外為更精進生產力，獨家研發各項自動化生產設備，節省人工成本，提升產能，避免人工長時間勞動而產生職業傷害或人為疏失，穩定生產品質，使生產線更加流暢。
+                
+            .main_container
+                .main_title_out
+                    span.main_title 綠能環保
+            .makers_full_screen
+                .swiper-container
+                    .swiper-wrapper  
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_2_1.jpg", alt="") 
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_2_2.jpg", alt="") 
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_2_3.jpg", alt="") 
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_2_4.jpg", alt="") 
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_2_5.jpg", alt="")
+                    .swiper-pagination
+                    .swiper-button-prev.swiper-button-black
+                    .swiper-button-next.swiper-button-black
+            .main_container
+                .makers_container
+                    .makers_rol_6.top
+                        .main_icon 使用環保永續木材
+                        span 因為對環境的珍惜與重視，知音文創將環保概念納入企業政策，在產品研發和製造方面，皆重視綠能、減碳環保之執行。我們使用永續林業的木材製作產品，可提供FSC認證紙張加工，並為NHLA北美硬木板材協會的會員，確保您購買的所有產品來自於人工林，落實企業推廣永續森林的理念，也邀請消費者一起對環境友善。
+                    .makers_rol_6.top    
+                        .main_icon 友善環境的生產製造
+                        span 有效使用木材，我們先將原木料裁切成不同基本型，依照產品製程需求選用，提高取材率，減少加工浪費。木產品上色與塗層採用水性顏料，減少對環境的汙染。
+            .main_container
+                .main_title_out
+                    span.main_title 堅持品質
+            .makers_full_screen
+                .swiper-container
+                    .swiper-wrapper  
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_3_1.jpg", alt="") 
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_3_2.jpg", alt="") 
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_3_3.jpg", alt="") 
+                    .swiper-pagination
+                    .swiper-button-prev.swiper-button-black
+                    .swiper-button-next.swiper-button-black
+            .main_container
+                .makers_container
+                    .makers_rol_6.top
+                        .main_icon 通過國際檢測標準
+                        span 成立物料檢測實驗室，嚴格為品質把關。我們的物料檢測實驗室，嚴格按照 ISO/IEC 17025 實驗室管理規範運作管理，包含物理性、化學性檢測，檢驗8大重金屬含量，確保使用安全無毒物料、生產符合安全法規的商品。
+                        span.gray 符合法規：美國CPSIA消費品安全改進法案 / 歐盟ROHS法規
+                    .makers_rol_6.top(style="letter-spacing:1px")    
+                        .main_icon 檢測實驗室設備
+                        span XRF射線螢光分析儀： 8大重金屬檢測
+                        span ICPS-7510 電感耦合等離子體發射光譜儀：8大重金屬檢測
+                        span Uv1800紫外可視分光光度計：甲醛、六價鉻檢測
+                        span GC-MS 2010 PIUS氣相色譜質譜聯用儀：鄰苯二甲酸鹽7P檢測
+            .main_container
+                .main_title_out
+                    span.main_title ISO認證與社會責任
+            .makers_full_screen
+                .swiper-container
+                    .swiper-wrapper  
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_4_1.jpg", alt="") 
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_4_2.jpg", alt="") 
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_4_3.jpg", alt="") 
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_4_4.jpg", alt="") 
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_4_5.jpg", alt="")
+                    .swiper-pagination
+                    .swiper-button-prev.swiper-button-black
+                    .swiper-button-next.swiper-button-black
+                span.text 推行ISO14001環境衛生管理體系，注重節能減排、保護環境、預防污染，提供員工良好工作深圳廠以及廈門廠區、總占地面積38000平方米，規模達2000人。符合國際標準組織管理規範。環境，減少環境災害風險。
+            .main_container
+                .makers_container
+                    .makers_rol_6.top
+                        .main_icon 品質
+                        span 實施ISO9001品質管理體系：注重管理責任、資源管理、產品實現、分析與改善。實現高效益、優質服務和產品。
+                    .makers_rol_6.top    
+                        .main_icon 環境
+                        span 推行ISO14001環境衛生管理體系，注重節能減排、保護環境、預防污染，提供員工良好工作環境，減少環境災害風險。
+                    .makers_rol_12.top    
+                        .main_icon 健康安全
+                        span 推行OHSAS 18001職業健康安全管理體系：注重職安預防措施、危害鑑別、員工衛生健康管理，保障員工健康、職業安全。知音文創不斷提昇組織之應變力及競爭力，提供優良的產品與服務素質，同時重視環境與社會責任，以達到永續經營為目標。
+            .makers_full_screen.gray
+                .main_container
+                    .makers_container.logo
+                        .makers_rol_6.top
+                            .logo.cti
+                            .logo_text
+                                a(href="/asset/img/CH/desktop/makers/production/gti_1.jpg" target="_blank").link
+                                    span.arrow 質量管理體系認証証書
+                                    span GB/T 19001-2008/ISO9001:2008
+                                a(href="/asset/img/CH/desktop/makers/production/gti_2.jpg" target="_blank").link
+                                    span.arrow 職業健康安全管理體系認証証書
+                                    span GB/T 28001-2011/OHSAS 18001:2007
+                                a(href="/asset/img/CH/desktop/makers/production/gti_3.jpg" target="_blank").link
+                                    span.arrow 環境管理體系認証証書
+                                    span GB/T24001-2004/ISO14001:2004
+                        .makers_rol_6.top
+                            .logo.sgs
+                            .logo_text
+                                a(href="/asset/img/CH/desktop/makers/production/sgs_1.jpg" target="_blank").link
+                                    span.arrow Chain-of-Custody
+                                    span SGSHK-COC-088730
+    include ./include/common/service.pug
+    +service("not_index")  
+    include ./include/common/fixed_service.pug

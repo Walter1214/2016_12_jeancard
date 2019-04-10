@@ -1,0 +1,253 @@
+extends _master.pug
+block head-append
+    title 歷史沿革｜知音文創 Jean Cultural & Creative Co., Ltd.
+    meta(property="og:title" content="歷史沿革｜知音文創 Jean Cultural & Creative Co., Ltd.")
+    meta(name="description" content="知音文創的歷年大事記、里程碑與得獎紀錄。")
+    meta(property="og:description" content="知音文創的歷年大事記、里程碑與得獎紀錄。")
+
+    script(src="/asset/js/history.js" defer)
+    link(rel="stylesheet", href="/asset/css/history.css")
+
+block header
+    include ./include/master/header.pug
+    +header(['','ON','','','',''])
+
+block content-extend
+    include ./include/common/page_theme.pug
+    include ./include/common/page_select.pug
+    include ./include/common/select.pug
+    include ./include/master/makers_header.pug
+    .business
+        +page_theme("ABOUT","關於知音","background-image:url('${require(`../../img/CH/desktop/buyers/bg.jpg`)}')")
+
+        +page_select([['經營理念','/CH/about.html',''],['歷史沿革','/CH/history.html','ON'],['經典商品','/CH/classic.html',''],['人才招募','/CH/hiring.html','']],false)
+        +makers_header([['經營理念','/CH/about.html',''],['歷史沿革','/CH/history.html','ON'],['經典商品','/CH/classic.html',''],['人才招募','/CH/hiring.html','']])
+        .history_select_out
+                .history_select
+                    .switch_click.default_option 創新2007~至今
+                    .switch_click.switchskin
+                    .history_option_out
+                        each val,index in [['創新2007~至今'],['成長 1990-2006'],['起步 1976-1989']]
+                            p.history_option.option_click(data-value=index data-name=val[0])=val[0]
+
+        .main_content     
+            .main_container.first_container.history
+                .history_container.blue
+                    .history_title.title_click
+                        h1 創新2007~至今
+                        p 邁向數位、傳遞永續經營理念
+                        .history_menu
+                    .history_content
+                        .history_record
+                            span.year.blue 2016
+                            span.text 木器自動化設備研發，使用自動仿型、黏貼、底座成型…等自動加工機，從手工到自動化製成，使產品在品質更加精進與完美。
+                            span.text.last 通過台灣組合式植栽盆專利。(新型第M532728號)
+                            span.history_logo.width_50.mileage 
+                                span.logo_text_out 
+                                    span.logo_text Wooderful life家電類商品正式推出。
+                            span.history_logo.width_50.prize_cup 
+                                span.logo_text_out 
+                                    span.logo_text 城市音樂鈴榮獲基隆好物設計競賽首獎。
+                        .history_record
+                            span.year.blue 2015
+                            span.history_logo.prize_cup 
+                                span.logo_text_out 
+                                    span.logo_text 榮獲shopping design雜誌最佳風格企業獎。
+                        .history_record
+                            span.year.blue 2014
+                            span.history_logo.mileage 
+                                span.logo_text_out 
+                                    span.logo_text 開啟了『來趣』系列品牌，用各種角度、推出選擇多樣、富有使命感的系列商品，打造在地文化的完美獻禮。
+                        .history_record
+                            span.year.blue 2013
+                            span.history_logo.mileage 
+                                span.logo_text_out 
+                                    span.logo_text 成立『紙風景Paper Nthought』品牌，獨創的雷射切割技術，透過光線的穿透，呈現多樣的光影變化，使作品呈現多元面貌與精緻細膩的高價值感。
+                            span.history_logo.prize_cup 
+                                span.logo_text_out 
+                                    span.logo_text 紙膠帶榮獲紐約文具禮品展最佳新產品獎。
+                        .history_record
+                            span.year.blue 2012
+                            span.text 正名為『知音文創產業股份有限公司』，企業發展也從設計製造商、轉型為知音自有品牌。
+                            span.text 啟用台北廠，佈局MIT紙膠帶、精細的雷射紙製品以及木器品牌組裝生產線，主要產品供給台灣內銷市場。
+                            span.text 取得ISO14001環境衛生管理體系認證，提供員工良好工作環境，減少環境災害風險。
+                            span.text.last 通過美國針織線材對應紙板結構專利。(8292066)
+                            span.history_logo.mileage 
+                                span.logo_text_out 
+                                    span.logo_text 『繡[xiu] Crafts』品牌推出，傳遞「畫中有話」、「以針代筆，以線潤色」的原創精神，為這塊土地上色彩。
+                            span.history_logo.mileage 
+                                span.logo_text_out 
+                                    span.logo_text 『 Wooderful life』品牌問世，讓發條帶動迷人音律及趣味動態，用原木的產品點綴生活，傳遞人與自然間溫潤的情感，讓感動隱於生活中單純的美好。
+                        .history_record
+                            span.year.blue 2011
+                            span.history_logo.mileage 
+                                span.logo_text_out 
+                                    span.logo_text 成立『紙風景Paper Nthought』品牌，獨創的雷射切割技術，透過光線的穿透，呈現多樣的光影變化，使作品呈現多元面貌與精緻細膩的高價值感。
+                            span.history_logo.prize_cup 
+                                span.logo_text_out 
+                                    span.logo_text 紙膠帶榮獲紐約文具禮品展最佳新產品獎。
+                        .history_record
+                            span.year.blue 2010
+                            span.text 注塑部門成立，新技術設備引進，讓生產越趨專業。 同年，銷售觸角朝內陸市場拓展。
+                            span.text.last 通過台灣針織線材對應紙板結構專利。(新型第M373927號)
+                            span.history_logo.mileage 
+                                span.logo_text_out 
+                                    span.logo_text 成立『FUNTAPE』品牌，使用長纖的台灣棉紙與環保油墨，經過2年研發，開發出輕透又好撕的MIT紙膠帶。
+                            span.history_logo.mileage 
+                                span.logo_text_out 
+                                    span.logo_text 成立『i-Marker』品牌，極精細刀模與沖孔設計，致力於創造出便利貼的獨特性，功能再進化。
+                            span.history_logo.mileage 
+                                span.logo_text_out 
+                                    span.logo_text 生產授權DEKO BOKO好朋友系列禮品。
+                            span.history_logo.prize_cup 
+                                span.logo_text_out 
+                                    span.logo_text 榮獲紐約文具禮品展年度最佳卡片獎。
+                        .history_record
+                            span.year.blue 2009
+                            span.text 成立物料檢測實驗室，按照ISO/IEC 17025實驗室管理規範運作管理，嚴格為商品　品質安全把關。
+                            span.text.last 十字繡部門成立與雷射切割部門擴線，為禮品開發更趨全面性。
+                        .history_record
+                            span.year.blue 2007
+                            span.text 數位與物流部門成立，為商品開發與生產更添效率。
+                            span.text.last ERP系統正啟用，生產正式邁向E化標準化。
+                            span.history_logo.mileage 
+                                span.logo_text_out 
+                                    span.logo_text 生產授權產品 Martha Stewart
+                            span.history_logo.mileage 
+                                span.logo_text_out 
+                                    span.logo_text 與亞洲迪士尼公司簽訂合作契約。同年也獲得日本三麗鷗公司歐洲區卡片授權。對於設計、技術與品質，再次受到國際肯定。
+                            span.history_logo.prize_cup 
+                                span.logo_text_out 
+                                    span.logo_text 榮獲迪士尼全球文具禮品高峰會亞太區最佳產品獎。
+                .history_container.green
+                    .history_title.title_click
+                        h1 成長 1990-2006
+                        p 跨足海外、邁向全球
+                        .history_menu
+                    .history_content
+                        .history_record
+                            span.year.green 2006
+                            span.text.last 知音深圳廠正式啟用，可容納6000名員工，打造世界級的庭園景觀工廠。提供80%以上的產能，主要供給各國市場的訂單需求。
+                            span.history_logo.mileage 
+                                span.logo_text_out 
+                                    span.logo_text 迪士尼授權設計紙類禮品
+                            span.history_logo.mileage 
+                                span.logo_text_out 
+                                    span.logo_text 生產授權產品Coca Cola、 Sesame Street、Elvis、NBA、Marvel、Fuji Yoko(藤井陽子)。
+                            span.history_logo.prize_cup 
+                                span.logo_text_out 
+                                    span.logo_text 手工貼紙榮獲法蘭克福展最佳產品獎。
+                        .history_record
+                            span.year.green 2005
+                            span.history_logo.mileage 
+                                span.logo_text_out 
+                                    span.logo_text 生產授權產品Snoopy、NASCAR、Dr. Seuss、NFL、NASCAR。
+                        .history_record
+                            span.year.green 2004
+                            span.text 成立IT部門，從行銷開發到生產管理流程，導入系統化，加速流程管理提高工作效能。
+                            span.text.last 開發ERP系統平台，達到部門之間作業的流暢，與公司不斷創新的系統需求。
+                            span.history_logo.mileage 
+                                span.logo_text_out 
+                                    span.logo_text 生產授權產品Ghibli (宮崎駿)、MLB、Harley Davidson、M&M。
+                            span.history_logo.prize_cup 
+                                span.logo_text_out 
+                                    logo_text 手工貼紙榮獲美國知名手作雜誌讀者票選為最佳年度創新產品獎。
+                        .history_record
+                            span.year.green 2003
+                            span.text.last 通過迪士尼驗廠審核，授權生產製造迪士尼相關商品。
+                            span.history_logo.mileage 
+                                span.logo_text_out 
+                                    span.logo_text 生產授權產品Disney、Laura Ashley、Hasbro。
+                            span.history_logo.prize_cup 
+                                span.logo_text_out 
+                                    span.logo_text 榮獲紐約文具禮品展年度最佳卡片獎。
+                        .history_record
+                            span.year.green 2002
+                            span.text 深圳通過ISO9001品質管理體系認證，證明在開發流程及生產加工技術上獲得國際肯定。
+                            span.text.last 金音廈門廠正式啟用。
+                            span.history_logo.prize_cup 
+                                span.logo_text_out 
+                                    span.logo_text 榮獲紐約文具禮品展年度最佳卡片獎 。
+                        .history_record
+                            span.year.green 1999
+                            span.text.last 深圳廠正式投產，完成紙品製造作業一貫化，朝設計開發與生產製造垂直整合方向邁進新的里程碑。   
+                        .history_record
+                            span.year.green 1998
+                            span.text.last 在中國深圳設立印刷紙製品廠，在海外地區建立生產基地的開始。 
+                            span.history_logo.mileage 
+                                span.logo_text_out 
+                                    span.logo_text 與日本三麗鷗公司簽訂合作契約，接受委託代工製造三麗鷗耶誕卡，並獲得台灣地區卡片之製造及銷售唯一授權。 
+                        .history_record
+                            span.year.green 1997
+                            span.text.last 〝知音雜誌社〞成立，〝BaLa小站月刊〞同時創刊，為金音公司與消費者間建立起緊密互動之橋樑。
+                        .history_record
+                            span.year.green 1996
+                            span.text.last 台灣總公司設址新店，18年來提供舒適的辦公環境，有一座花園與溫室，並設置森林木屋員工餐廳。
+                            span.history_logo.mileage 
+                                span.logo_text_out 
+                                    span.logo_text 新系列自然素材、純手工卡片上市，贏得國內外一致好評，再度證明〝知音卡片〞在業界中之龍頭地位。
+                        .history_record
+                            span.year.green 1995
+                            span.history_logo.mileage 
+                                span.logo_text_out 
+                                    span.logo_text 推出小淘氣、嘰哩呱啦、收藏貓系列，重新建立國內LOGO商品市場秩序。當年度在國際展中推出生活雜貨系列。
+                            span.history_logo.mileage 
+                                span.logo_text_out 
+                                    span.logo_text 開發園藝系列，將植栽禮品化，推出紅土盆器、仿石頭盆器，以及小植物盆栽。
+                        .history_record
+                            span.year.green 1994
+                            span.history_logo.mileage 
+                                span.logo_text_out 
+                                    span.logo_text 〝凱西〞系列異軍突起，獲得廣大迴響，成為新一代青少年偶像品牌。 
+                        .history_record
+                            span.year.green 1990
+                            span.text.last 在香港、東南亞地區建立了海外的行銷通路。  
+                .history_container.yellow
+                    .history_title.title_click
+                        h1 起步 1976-1989
+                        p 草創時期、一步一腳印
+                        .history_menu
+                    .history_content
+                        .history_record
+                            span.year.yellow 1989
+                            span.text.last 改組為「金音股份有限公司」，全面導入電腦化。 
+                        .history_record
+                            span.year.yellow 1988
+                            span.history_logo.mileage 
+                                span.logo_text_out 
+                                    span.logo_text 推出半面立體貼紙、黏貼手工卡片，開創了知音手工片的歷史。
+                        .history_record
+                            span.year.yellow 1986
+                            span.history_logo.mileage 
+                                span.logo_text_out 
+                                    span.logo_text 創造明星商品〝OK絆貼紙〞、〝裝飾鏡〞、〝拼圖〞，造成台灣市場大流行，其中裝飾鏡及木器更接獲大量的歐洲訂單。
+                            span.history_logo.mileage 
+                                span.logo_text_out 
+                                    span.logo_text 獲得美國〝FIDO DIDO〞、〝Garfield〞品牌授權。  
+                        .history_record
+                            span.year.yellow 1985
+                            span.text.last 設立波麗工廠及網印工廠，自行生產波麗飾品及掛圖、裝飾畫，外銷歐美市場深獲好評。 
+                            span.history_logo.prize_cup 
+                                span.logo_text_out 
+                                    span.logo_text 連續兩年獲得最受歡迎聖誕卡票選活動金牌獎。
+                        .history_record
+                            span.year.yellow 1981
+                            span.text.last 正式創立金音有限公司。
+                            span.history_logo.mileage 
+                                span.logo_text_out 
+                                    span.logo_text 迪士尼授權設計紙類禮品
+                            span.history_logo.mileage 
+                                span.logo_text_out 
+                                    span.logo_text 成功推出第一套商品〝知音小袋鼠小卡〞，奠定知音在紙品界的基礎。
+                        .history_record
+                            span.year.yellow 1978
+                            span.text.last 在台北車站前，成立了「知音書卡禮物中心」門市
+                            span.history_logo.mileage 
+                                span.logo_text_out 
+                                    span.logo_text 推出了以「知音」為 品牌的賀 年卡。 
+                        .history_record
+                            span.year.yellow 1976
+                            span.text.last 「創意美工製作群」工作室成立。 
+    include ./include/common/service.pug
+    +service("not_index")  
+    include ./include/common/fixed_service.pug

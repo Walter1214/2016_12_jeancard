@@ -1,0 +1,80 @@
+extends _master.pug
+block head-append
+    title Contact | Jean Cultural & Creative
+    meta(property="og:title" content="Contact | Jean Cultural & Creative")
+    meta(name="description" content="Contact us for sales inquiries. Our sales team will get back to you soon.")
+    meta(property="og:description" content="Contact us for sales inquiries. Our sales team will get back to you soon.")
+
+    script(src="/asset/js/business.js" defer)
+    link(rel="stylesheet", href="/asset/css/business.css")
+
+
+block header
+    include ./include/master/header.pug
+    +header(['','','','','','ON'])
+    
+block content-extend
+    include ./include/common/page_theme.pug
+    include ./include/common/page_select.pug
+    include ./include/common/select.pug
+    include ./include/master/makers_header.pug
+    .business
+        +page_theme("CONTACT","聯絡我們","background-image:url('${require(`../../img/CH/desktop/shoplist/bg.jpg`)}')")
+
+        +page_select([['Shoplist','/EN/shoplist.html',''],['Business','/EN/business.html','ON'],['Contact','/EN/contact.html','']],false)
+        +makers_header([['Shoplist','/EN/shoplist.html',''],['Business','/EN/business.html','ON'],['Contact','/EN/contact.html','']])
+        .main_content
+            .main_container.first_container
+                .main_title_out
+                    span.main_title Contact Information
+                .main_wrap
+                    .direct_store_container
+                        each val in [{name:"Jean Cultural & Creative Co., Ltd./ Taiwan Headquarters",address:"1F, NO.95-6 PAO-CHUNG RD, HSIN TIEN DIST., NEW TAIPEI CITY, TAIWAN, R.O.C.",tel:"+886-2-29171700",fex:"+886-2-29186216",img:"~CH/desktop/business/building_0.jpg"},{name:"Jean Card and Gift (ShenZhen) Co., Ltd",address:"No.451, Guiyue Road, Zhangge Village, Dashuikeng, Guanlan Sub-district, Bao'an District, Shenzhen,CHINA",tel:"+86-755-29832000",fex:"+86-755-29521012",img:"~CH/desktop/business/building_1.jpg"},{name:"Jean card and Gift (Xia Men) Co., Ltd",address:"NO.198 Ying yao road north of ji mei district",tel:"+86-592-6680188",fex:"+86-592-6683088",img:"~CH/desktop/business/building_2.jpg"}]
+                            .direct_store
+                                img.store_img(src=val.img)
+                                //- .store_img(style="background-image:url('${require(`../../img/CH/desktop/shoplist/show_2.jpg`)}')")
+                                .store_name.business=val.name
+                                .store_address.business=val.address
+                                .store_info.business
+                                    span.title.blue TEL
+                                    .text=val.tel
+                                .store_info.business
+                                    span.title.blue FEX
+                                    .text=val.fex
+                .main_title_out
+                    span.main_title Online Inquiry
+                .main_wrap
+                    .direct_store_container.space_between
+                        .left_space.business
+                            .text.desktop Complete and submit the contact form below. Our customer service representative will contact you soon.
+                            //- .text.desktop 
+                            .text.icon
+                            //- .text.desktop 我們將安排專人盡快與您聯絡
+                            .text.mobile Complete and submit the contact form below. Our customer service representative will contact you soon.
+                        .right_space
+                            +select([['Inquiry category'],['媒體通關洽談'],['紙膠帶客製化服務'],['其他商品客製化服務'],['其他']])
+                            textarea(placeholder="Please leave your inquiry, we will reply asap.")
+                            +select([['Address'],['台灣'],['中港澳'],['其他']])
+                            .gender
+                                .input_gender
+                                    input(type="text" placeholder="Full name")
+                                .select_gender
+                                    +select([['Mr.'],['Ms.']])
+                            input(type="text" placeholder="Phone (not necessary)")
+                            .rule_text *Mobile phone or local phone number with area code, no mark is required. For example, 0933123456 or 0229171700.
+                            //- .rule_text 
+                            input(type="text" placeholder="E-mail")
+                            input(type="text" placeholder="Company/ Department/Organization")
+                            .vcode
+                                img(src="", alt="")
+                                input(type="text" placeholder="Enter code")
+                                a(href="javascript:;").update renew code
+                            //- .rule_text.red *以上欄位皆為必填
+
+                            a(href="javascript:;").more_btn.brown.send_Info Submit
+                                .more_hover()
+                            
+                    
+    include ./include/common/service.pug
+    +service("not_index")  
+    include ./include/common/fixed_service.pug

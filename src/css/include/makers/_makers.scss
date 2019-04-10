@@ -1,0 +1,412 @@
+.makers_description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 75px 0;
+    @include lessThan($rwdL) {
+        padding: 50px 0;
+    }
+    h1 {
+        font-size: 38px;
+        line-height: 52px;
+        letter-spacing: 4px;
+        color: #717372;
+        margin-bottom: 20px;
+    }
+    span {
+        width: 750px;
+        font-size: 18px;
+        line-height: 27px;
+        letter-spacing: 2px;
+        color: #717372;
+        display: inline-block;
+        text-align: center;
+        @include lessThan($rwdL) {
+            width: 600px;
+            font-size: 24px;
+            line-height: 36px;
+            text-align: left;
+        }
+    }
+}
+
+.makers_photo {
+    width: 100%;
+    padding: 0 0 50px 0;
+    .makers_photo_4 {
+        width: 33%;
+        display: inline-block;
+        background-position: center;
+        background-size: cover;
+        box-sizing: border-box;
+        border: 1px solid white;
+        border-top: 2px solid white;
+        @for $i from 1 through 3 {
+            &.design_2_#{$i} {
+                background-image: url('~CH/desktop/makers/design/ph_2_#{$i}.jpg');
+                height: 185px;
+            }
+        }
+        @for $i from 1 through 3 {
+            &.material_2_#{$i} {
+                background-image: url('~CH/desktop/makers/material/ph_2_#{$i}.jpg');
+                height: 185px;
+            }
+        }
+        @for $i from 1 through 6 {
+            &.material_3_#{$i} {
+                background-image: url('~CH/desktop/makers/material/ph_3_#{$i}.jpg');
+                height: 185px;
+            }
+        }
+        @include lessThan($rwdL) {
+            width: 50%;
+            height: 170px;
+            &.first {
+                width: 100%;
+                height: 340px;
+            }
+        }
+    }
+}
+
+.makers_container {
+    width: 100%;
+    height: auto;
+    // border: 1px solid red;
+    font-size: 0;
+    box-sizing: border-box;
+    padding-bottom: 45px;
+    text-align: justify;
+    @at-root .EN .makers_container {
+        text-align: left;
+    }
+    .top {
+        vertical-align: top;
+    }
+    .makers_rol_6 {
+        box-sizing: border-box;
+        display: inline-block;
+        width: 50%;
+        position: relative;
+        // border: 1px solid blue;
+        padding: 0 20px 40px 0;
+        // &.marketing{
+        //     padding: 0;
+        // }
+        @include lessThan($rwdL) {
+            width: 100%;
+            padding: 0 0 40px 0;
+        }
+    }
+    .about_width_900 {
+        box-sizing: border-box;
+        display: block;
+        width: 900px;
+        padding: 0 0 40px 0;
+        margin: 0 auto;
+        @include lessThan($rwdL) {
+            //     padding: 0 0 40px 0;
+            width: 600px;
+        }
+        span {
+            padding: 0 10px;
+            font-size: 14px;
+            @include lessThan($rwdL) {
+                font-size: 28px;
+                line-height: 42px;
+            }
+            &.blod {
+                color: #50504e;
+                font-weight: 700;
+                line-height: 40px;
+                font-size: 15px;
+                @include lessThan($rwdL) {
+                    font-size: 28px;
+                    line-height: 36px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+    .makers_rol_12 {
+        box-sizing: border-box;
+        display: inline-block;
+        width: 100%;
+        padding: 0 20px 40px 0;
+        @include lessThan($rwdL) {
+            padding: 0 0 40px 0;
+        }
+        // border: 1px solid blue;    
+    }
+    .company_logo_list {
+        box-sizing: border-box;
+        font-size: 0;
+        width: 100%;
+        padding-bottom: 40px;
+        .company_logo {
+            width: 250px;
+            height: 100px;
+            text-align: center;
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            &:before {
+                content: "";
+                width: 0;
+                height: 100%;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            &>img {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            @include lessThan($rwdL) {
+                width: 200px;
+            }
+        }
+    }
+    &.company_log {
+        padding: 40px 0 0 0;
+    }
+    &.logo {
+        padding: 40px 0 0 0;
+    }
+    .logo {
+        position: absolute;
+        left: 20px;
+        top: 0;
+        &.cti {
+            background-image: url('~CH/desktop/makers/production/cti_logo.png');
+            width: 95px;
+            height: 99px;
+        }
+        &.sgs {
+            background-image: url('~CH/desktop/makers/production/sgs_logo.png');
+            width: 111px;
+            height: 94px;
+        }
+        @include lessThan($rwdL) {
+            position: static;
+            left: 0;
+            margin: 0 0 30px 30px;
+        }
+    }
+    .logo_text {
+        padding: 0 0 0 155px;
+        @include lessThan($rwdL) {
+            padding: 0 0 0 30px;
+        }
+        a.link {
+            display: block;
+            padding: 0 0 30px 0;
+            &:last-child {
+                padding: 0;
+            }
+            &:hover {
+                span {
+                    color: #f3737d;
+                }
+            }
+            >span.arrow {
+                &::after {
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-left: 5px;
+                    content: '';
+                    width: 5px;
+                    height: 5px;
+                    transform: rotate(-45deg);
+                    border-right: 2px solid #dd6356;
+                    border-bottom: 2px solid #dd6356;
+                    @include lessThan($rwdL) {
+                        width: 10px;
+                        height: 10px;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+    span {
+        display: block;
+        font-size: 15px;
+        line-height: 23px;
+        letter-spacing: 1.5px;
+        color: #717372;
+        &.gray {
+            padding: 40px 0 0 0;
+            color: #a9abaa;
+        }
+        @include lessThan($rwdL) {
+            font-size: 24px;
+            line-height: 36px;
+        }
+    }
+    img.photo {
+        width: 490px;
+        height: 280px;
+        margin-bottom: 20px;
+        @include lessThan($rwdL) {
+            width: 600px;
+            height: 340px;
+        }
+    }
+}
+
+.makers_full_screen {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &.gray {
+        background-color: #f4f2f1;
+    }
+    >span.text {
+        width: 750px;
+        display: inline-block;
+        text-align: center;
+        font-size: 15px;
+        line-height: 23px;
+        letter-spacing: 2px;
+        padding: 0 0 60px 0;
+        color: #717372;
+        @include lessThan($rwdL) {
+            width: 600px;
+            font-size: 24px;
+            line-height: 36px;
+            text-align: left;
+        }
+    }
+}
+
+.swiper-container {
+    width: 100%;
+    // min-width: 640px;
+    height: 550px;
+    margin-bottom: 25px;
+    @include lessThan($rwdL) {
+        height: 350px;
+    }
+    .swiper-slide {
+        opacity: 0.7;
+        width: auto !important;
+        @include lessThan($rwdL) {
+            img {
+                width: 520px !important;
+            }
+        }
+        &.swiper-slide-active {
+            opacity: 1;
+        }
+    }
+    .swiper-pagination {
+        .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            border: 2px solid #b6aba5;
+            background: none;
+        }
+        .swiper-pagination-bullet-active {
+            width: 3px;
+            height: 3px;
+            border: 5px solid #b6aba5;
+        }
+    }
+    .swiper-button-prev {
+        @include moreThan($rwdL) {
+            left: calc(50% - 500px);
+        }
+        @at-root .desktop .swiper-container .swiper-button-prev {
+            left: calc(50% - 525px);
+        }
+    }
+    .swiper-button-next {
+        @include moreThan($rwdL) {
+            right: calc(50% - 500px);
+        }
+        @at-root .desktop .swiper-container .swiper-button-next {
+            right: calc(50% - 525px);
+        }
+    }
+    .swiper-button-disabled {
+        opacity: 0.2;
+    }
+}
+
+.makers_introduction {
+    width: 100%;
+    height: auto;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    @at-root .desktop .makers_introduction {
+        height: 500px;
+    }
+    &.h_auto {
+        height: auto;
+        min-height: auto;
+        padding-bottom: 60px;
+        span {
+            @include lessThan($rwdL) {
+                width: 600px;
+            }
+        }
+    }
+    &.marketing {
+        background-image: url('~CH/desktop/makers/marketing/ph_3_1.jpg');
+        h1 {
+            color: white;
+        }
+        span {
+            color: white;
+        }
+    }
+    &.design_1 {
+        background-image: url('~CH/desktop/makers/design/ph_3_1.jpg');
+        h1 {
+            color: #50504e;
+        }
+        span {
+            color: #50504e;
+        }
+    }
+    &.design_2 {
+        background-image: url('~CH/desktop/makers/design/ph_3_2.jpg');
+        h1 {
+            color: white;
+        }
+        span {
+            color: white;
+        }
+    }
+    h1 {
+        font-size: 30px;
+        letter-spacing: 2px;
+        padding-bottom: 50px;
+        color: #717372;
+    }
+    span {
+        width: 750px;
+        text-align: center;
+        font-size: 15px;
+        line-height: 23px;
+        letter-spacing: 2px;
+        display: inline-block;
+        color: #717372;
+        @include lessThan($rwdL) {
+            width: 520px;
+            text-align: left;
+            font-size: 24px;
+            line-height: 36px;
+        }
+    }
+}

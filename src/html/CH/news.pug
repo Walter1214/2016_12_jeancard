@@ -1,0 +1,49 @@
+extends _master.pug
+block head-append
+    title 最新消息｜知音文創 Jean Cultural & Creative Co., Ltd.
+    meta(property="og:title" content="最新消息｜知音文創 Jean Cultural & Creative Co., Ltd.")
+    meta(name="description" content="從最新消息獲得知音文創的最新動態，快來看看還有什麼新消息!")
+    meta(property="og:description" content="從最新消息獲得知音文創的最新動態，快來看看還有什麼新消息!")
+
+    link(rel='stylesheet', href="/asset/lib/swiper/swiper.min.css")
+    script(src="/asset/lib/swiper/swiper.min.js" defer)
+
+    script(src="/asset/js/news.js" defer)
+    link(rel="stylesheet", href="/asset/css/news.css")
+
+block header
+    include ./include/master/header.pug
+    +header(['ON','','','','',''])
+
+block content-extend
+    include ./include/common/page_theme.pug
+    include ./include/common/page_select.pug
+    include ./include/common/news_select.pug
+    .news
+        +page_theme("NEWS&EVENTS","最新消息","background-image:url('${require(`../../img/CH/desktop/news/bg.jpg`)}')")
+
+        //- +page_select([['全部消息','/CH/news.html','ON'],['企業動態','',''],['媒體報導','','']],true)
+        
+        .content 
+            +news_select([['全部消息','/CH/news.html','ON'],['企業動態','',''],['媒體報導','','']],true)
+            .container
+                - for (var x = 0; x < 5; x++)                              
+                    a(href="newsdetail.html").report     
+                        img.report_img(src="~CH/desktop/news/report_img_1.jpg")
+                        //- .report_img(style="background-image:url('${require(`../../img/CH/desktop/news/report_img_1.jpg`)}')")
+                        .report_title
+                            .date(style="background-color: #316db5;")
+                                .year 2016
+                                .month_day 11.16
+                            .article Wooderful life DIY 巡迴展-太古誠品
+                        .description
+                            h1 企業動態
+                            span 知音文創產業創立於1981，是國際知名的卡片、貼紙、文具、禮品設計製造公司，三十多年來，結合...
+                .btn_all
+                    a(href="javascript:;").more_btn.brown.news_page_more MORE
+                        .more_hover()
+
+    include ./include/common/service.pug
+    +service("not_index")  
+    include ./include/common/fixed_service.pug
+     

@@ -1,0 +1,47 @@
+extends _master.pug
+block head-append
+    title Distributor Login | Jean Cultural & Creative 
+    meta(property="og:title" content="Distributor Login | Jean Cultural & Creative ")
+    meta(name="description" content="Distributor Login")
+    meta(property="og:description" content="Distributor Login")
+
+    script(src="/asset/js/buyers.js" defer)
+    link(rel="stylesheet", href="/asset/css/buyers.css")
+
+block header
+    include ./include/master/header.pug
+    +header(['','','','','ON',''])
+
+block content-extend
+    include ./include/common/page_theme.pug
+    include ./include/common/page_select.pug
+    include ./include/master/makers_header.pug
+    include ./include/common/select.pug
+    .business
+        +page_theme("BUYERS","客戶服務","background-image:url('${require(`../../img/CH/desktop/buyers/bg.jpg`)}')")
+
+        +page_select([['Customization','/EN/customization.html',''],['Buyers','/EN/buyers.html','ON'],['線上音樂鈴試聽','http://59.120.39.177:8089/Login.aspx','','_blank']],false)
+        +makers_header([['Customization','/EN/customization.html',''],['Buyers','/EN/buyers.html','ON'],['線上音樂鈴試聽','http://59.120.39.177:8089/Login.aspx','','_blank']])
+        .main_content
+            .main_container.first_container
+                .main_wrap
+                    .direct_store_container.space_between
+                        .left_space.buyers
+                            //- .text.desktop 
+                            //- .text.mobile 
+                        .right_space
+                            input(type="text" placeholder="Enter account")
+                            input(type="text" placeholder="Enter code")
+                            .vcode
+                                img(src="", alt="")
+                                input(type="text" placeholder="Enter code")
+                                a(href="javascript:;").update renew code
+                            .rule_text.red *Above are required fields.
+                            .rule_text.red *If you cannot login, please ask your contact window for help or call 02-2917-1700, our receptionist will transfer phone call for you.
+                            a(href="javascript:;").more_btn.brown.send_Info Submit
+                                .more_hover()
+                            
+                    
+    include ./include/common/service.pug
+    +service("not_index")  
+    include ./include/common/fixed_service.pug

@@ -1,0 +1,15 @@
+mixin page_select(textarr,isUseMobile)
+    -var str = (isUseMobile)? 'OFF': '';
+    .page_select_out(class= str)
+        .page_select
+            each val in textarr
+                //- p
+                a(href=val[1] class=val[2] target=val[3]).text= val[0]
+    //- if isUseMobile
+    //-     .mobile_select_out
+    //-             .mobile_select
+    //-                 .switch.default_option= textarr[0][0]
+    //-                 .switch.switchskin
+    //-                 .option_out
+    //-                     each val,index in textarr    
+    //-                         p.option(data-value= index ,data-name=val[0])= val[0]

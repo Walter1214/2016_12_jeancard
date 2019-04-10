@@ -1,0 +1,78 @@
+  .pub_title {
+      position: relative;
+      height: 45px;
+      width: 100%;
+      @include lessThan($rwdL) {
+          height: 35px;
+      }
+      .date {
+          text-align: center;
+          box-sizing: border-box;
+          height: 100%;
+          width: 45px;
+          vertical-align: top;
+          line-height: 18px;
+          padding-top: 6px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          color: white;
+          @include lessThan($rwdL) {
+              //   height: 70px;
+              //   width: 70px;
+              //   line-height: 28px;
+              display: none;
+          }
+          .year {
+              letter-spacing: 1px;
+              font-size: 15px;
+              @include lessThan($rwdL) {
+                  font-size: 22px;
+              }
+          }
+          .month_day {
+              letter-spacing: 0.5px;
+              font-size: 13px;
+              @include lessThan($rwdL) {
+                  font-size: 22px;
+              }
+          }
+      }
+      .object {
+          color: #50504e;
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: calc(100% - 45px);
+          height: 100%;
+          box-sizing: border-box;
+          padding: 0 0 0 10px;
+          overflow: hidden;
+          @include lessThan($rwdL) {
+              //   width: calc(100% - 70px);
+              //   overflow: visible;
+              width: 100%;
+              font-size: 24px;
+              line-height: 35px;
+              font-weight: 500;
+          }
+          >span {
+              font-size: 14px;
+              color: #a9abaa;
+              line-height: 20px;
+              @include lessThan($rwdL) {
+                  display: none;
+              }
+          }
+          >h1 {
+              font-size: 16px;
+              line-height: 30px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              @include lessThan($rwdL) {
+                  font-size: 24px;
+              }
+          }
+      }
+  }

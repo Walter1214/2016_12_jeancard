@@ -1,0 +1,113 @@
+extends _master.pug
+block head-append
+    title Business | Jean Cultural & Creative 
+    meta(property="og:title" content="Business | Jean Cultural & Creative ")
+    meta(name="description" content="Insisting on “human-focus” &“deliver sensation” belief, we continuously develop automatic production equipment for better quality and efficiency.")
+    meta(property="og:description" content="Insisting on “human-focus” &“deliver sensation” belief, we continuously develop automatic production equipment for better quality and efficiency.")
+
+    link(rel='stylesheet' href="/asset/lib/swiper/swiper.min.css")
+    script(src="/asset/lib/swiper/swiper.min.js" defer)
+    script(src="/asset/js/about.js" defer)
+    link(rel="stylesheet", href="/asset/css/about.css")
+
+block header
+    include ./include/master/header.pug
+    +header(['','ON','','','',''])
+
+block content-extend
+    include ./include/common/page_theme.pug
+    include ./include/common/page_select.pug
+    include ./include/common/select.pug
+    include ./include/master/makers_header.pug
+    .business
+        +page_theme("ABOUT","關於知音","background-image:url('${require(`../../img/CH/desktop/buyers/bg.jpg`)}')")
+
+        +page_select([['Genesis','/EN/about.html','ON'],['History','/EN/history.html',''],['Classic','/EN/classic.html',''],['Hiring','/EN/hiring.html','']],false)
+        +makers_header([['Genesis','/EN/about.html','ON'],['History','/EN/history.html',''],['Classic','/EN/classic.html',''],['Hiring','/EN/hiring.html','']])
+        .main_content
+            .main_full_screen.about
+                .special_introduction.about
+                    .introduction_container.about
+                        .introduction_title_container
+                            .introduction_title.about Genesis
+                            .color
+                                .c_1(style="background-color: #f3a0a2;")
+                                .c_2(style="background-color: #6e99cb;")
+                                .c_3(style="background-color: #f7ac1d;")
+                                .c_4(style="background-color: #95d0bc;")
+                                .c_5(style="background-color: #dcb483;")
+                        .introduction_content.about
+                            .desktop Jean Cultural & Creative is the dream works of creativity, obsession, and passion.Upon its “human-focus” credo, Jean Cultural & Creative treats every member as family to build a natural and relaxing work environment. Upholding the aim to “deliver sensation”, Jean Cultural & Creative injects enthusiasm into product development to build countless classic designs that touch people.
+                            //- .desktop 
+                            .mobile Jean Cultural & Creative is the dream works of creativity, obsession, and passion. Upon its “human-focus” credo, Jean Cultural & Creative treats every member as family to build a natural and relaxing work environment. Upholding the aim to “deliver sensation”, Jean Cultural & Creative injects enthusiasm into product development to build countless classic designs that touch people.
+                    .more.more_btn
+            .main_container.first_container
+                .main_title_out
+                        span.main_title Work Environment and Factories
+            .makers_full_screen
+                .swiper-container
+                    .swiper-wrapper
+                        -for (var i = 1; i < 6; i ++)  
+                            -var linkStr = "~CH/desktop/about/ph_1_"+ i +".jpg"
+                            .swiper-slide
+                                img(src=linkStr, alt="") 
+                    .swiper-pagination
+                    .swiper-button-prev.swiper-button-black
+                    .swiper-button-next.swiper-button-black
+            .main_container
+                .makers_container
+                    .about_width_900.top    
+                        .main_icon Taipei Headquarter - Design & Operation Center
+                        span.blod Onset of Passion and Creativity
+                        span In the busy city sits a quiet green garden where the design team germinates beautiful designs in a green and comfortable environment. This creative and operational center located in Xindian District for a quarter century is where products are designed to “touch” people.  The human-focus workplace with a material concept store Jeantopia (Jean + Utopia) for realizing creative handmade ideas enables Jean Cultural & Creative to innovate every design with a specific emotion.
+            .makers_full_screen
+                .swiper-container
+                    .swiper-wrapper
+                        -for (var i = 1; i < 6; i ++)  
+                            -var linkStr = "~CH/desktop/about/ph_2_"+ i +".jpg"
+                            .swiper-slide
+                                img(src=linkStr, alt="") 
+                    .swiper-pagination
+                    .swiper-button-prev.swiper-button-black
+                    .swiper-button-next.swiper-button-black
+            .main_container
+                .makers_container
+                    .about_width_900.top    
+                        .main_icon Jean Taipei factory
+                        span.blod A Dream to Create Pure MIT Products
+                        span To create pure Made-In-Taiwan (MIT) quality products, Jean Taipei began to develop and manufacture masking tapes in the “Funtape” brand name in 2012. Emphasizing the pure MIT breed from design through material uses to manufacture, Jean Taipei launched non-toxic masking tapes and subsequently added the 3D laser paper cutting products and Wooderful life wood products ranges in hope of offering more higher-quality pure MIT products.
+            .makers_full_screen
+                .swiper-container
+                    .swiper-wrapper
+                        -for (var i = 1; i < 6; i ++)  
+                            -var linkStr = "~CH/desktop/about/ph_3_"+ i +".jpg"
+                            .swiper-slide
+                                img(src=linkStr, alt="") 
+                    .swiper-pagination
+                    .swiper-button-prev.swiper-button-black
+                    .swiper-button-next.swiper-button-black
+            .main_container
+                .makers_container
+                    .about_width_900.top    
+                        .main_icon Jean at Shenzhen Culture Creative Park
+                        span.blod A Foundation for Realizing Passionate and Creative Design
+                        span Insisting on a “human-focus” belief, Jean Cultural & Creative pioneered the production base in a garden resort. Inside a green, relaxing, and spacious industrial park is a professional R&D department with high execution power, efficient production, and exquisite technology to connect with the Taipei Design Center. To manufacture high-quality products, Jean Cultural & Creative implements systematic management in Jean at Shenzhen Culture Creative Park in process management, material purchase, production and processing, and outgoing quality control. In addition, Jean Cultural & Creative continuously develop automatic production equipment for better quality and efficiency.
+            .makers_full_screen
+                .swiper-container
+                    .swiper-wrapper
+                        -for (var i = 1; i < 6; i ++)  
+                            -var linkStr = "~CH/desktop/about/ph_4_"+ i +".jpg"
+                            .swiper-slide
+                                img(src=linkStr, alt="") 
+                    .swiper-pagination
+                    .swiper-button-prev.swiper-button-black
+                    .swiper-button-next.swiper-button-black
+            .main_container
+                .makers_container
+                    .about_width_900.top    
+                        .main_icon Jean Xiamen Business & Sales Department
+                        span.blod Marketing and Production Center for Northern China
+                        span Located in the beautiful Jimei District in Xiamen City, Jean Xiamen plans marketing strategies for the business in northern China and deals with the e-commerce in China. To fulfill the product demand in China, Jean Xiamen has its own Wooderful life assembly line and production lines for handcrafted cards, stickers, and other Jean products.
+    include ./include/common/service.pug
+    +service("not_index")  
+    include ./include/common/fixed_service.pug

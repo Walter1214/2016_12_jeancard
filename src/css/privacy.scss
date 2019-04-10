@@ -1,0 +1,47 @@
+@import './include/master/_walter.scss';
+@import './include/common/_main.scss';
+@import './include/common/_page_theme.scss';
+@import './include/master/_more_btn.scss';
+@import './include/common/_service.scss';
+@import './include/common/_fixed_service.scss';
+@import './include/common/_select.scss';
+.privacy_container {
+    width: 750px;
+    margin: 0 auto;
+    color: #707372;
+    padding: 40px 0 80px 0;
+    @include lessThan($rwdL) {
+        width: 600px;
+        padding: 80px 0 80px 0;
+    }
+    .dotted_line {
+        background-image: url('../img/CH/desktop/privacy/dotted_line.png');
+        width: 100%;
+        height: 1px;
+        margin: 40px 0;
+    }
+    span {
+        font-size: 15px;
+        line-height: 24px;
+        letter-spacing: 2px;
+        display: block;
+        &.last_span {
+            padding-bottom: 60px;
+        }
+        @include lessThan($rwdL) {
+            font-size: 24px;
+            line-height: 36px;
+        }
+    }
+    h1 {
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 2px;
+                    font-weight: 700;
+        @include lessThan($rwdL) {
+            font-size: 24px;
+            line-height: 36px;
+
+        }
+    }
+}

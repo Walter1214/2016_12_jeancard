@@ -1,0 +1,170 @@
+extends _master.pug
+block head-append
+    title News| Jean Cultural & Creative 
+    meta(property="og:title" content="News| Jean Cultural & Creative ")
+    meta(name="description" content="With complete production equipment and eco-friendly manufacturing process, we provide quality products and services and assume environmental and social responsibilities to achieve sustainable operations.")
+    meta(property="og:description" content="With complete production equipment and eco-friendly manufacturing process, we provide quality products and services and assume environmental and social responsibilities to achieve sustainable operations.")
+
+    link(rel='stylesheet' href="/asset/lib/swiper/swiper.min.css")
+    script(src="/asset/lib/swiper/swiper.min.js" defer)
+    script(src="/asset/js/production.js" defer)
+    link(rel="stylesheet", href="/asset/css/production.css")
+
+block header
+    include ./include/master/header.pug
+    +header(['','','ON','','',''])
+
+block content-extend
+    include ./include/common/page_theme.pug
+    include ./include/common/page_select.pug
+    include ./include/common/select.pug
+    include ./include/master/makers_header.pug
+    .business
+        +page_theme("MAKERS","創新開發","background-image:url('${require(`../../img/CH/desktop/makers/bg.jpg`)}')")
+
+        +page_select([['Design','/EN/design.html',''],['Material','/EN/material.html',''],['Production','/EN/production.html','ON'],['Marketing','/EN/marketing.html','']],false)
+        +makers_header([['Design','/EN/design.html',''],['Material','/EN/material.html',''],['Production','/EN/production.html','ON'],['Marketing','/EN/marketing.html','']])
+        .main_content
+            .main_container
+                .makers_description
+                    span Apart from continuously improving organizational response ability and competitiveness, we provide quality products and services and assume environmental and social responsibilities to achieve sustainable operations.
+            .main_container
+                .main_title_out
+                    span.main_title High Efficiency Production
+            .makers_full_screen
+                .swiper-container
+                    .swiper-wrapper  
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_1_1.jpg", alt="") 
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_1_2.jpg", alt="") 
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_1_3.jpg", alt="") 
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_1_4.jpg", alt="") 
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_1_5.jpg", alt="")
+                    .swiper-pagination
+                    .swiper-button-prev.swiper-button-black
+                    .swiper-button-next.swiper-button-black
+            .main_container
+                .makers_container
+                    .makers_rol_6.top
+                        .main_icon Complete Production Equipment
+                        span Diversified printing, including 5-color UV press, 4-color press, digital press, tape glue coating machine, and all other special printing equipment.Professional processing equipment include lathes, CNC machine tools, wood cutting and forming machines, electric embroidery machines, laser cutters, automatic stamping machines, digital forming and cutting machines, and other large machinery.
+                            | </br>Comprehensive production machinery for creating products with unlimited possibilities.
+
+                    .makers_rol_6.top    
+                        .main_icon Modernized Production Process
+                        span To organize development and production processes including design and development, material uses, cost control, and production management, we have developed and implemented the exclusive ERP system to control progress and capacity in order to balance customer requirements and cost control and thereby meet customer requirements.
+                            | </br>Integrated process planning includes order management, stock management, A/R and A/P management, account management, production management, personnel and compensation management, production management, supply chain management, production line automatic assignment, processing machinery computerization, and remote control of manufacturing systems. To further increase productivity, we exclusively develop various automatic production equipment to reduce labor cost, enhance capacity, prevent occupational injuries or man-induced negligence of workers due to long-period working, stabilize production quality, and smooth production lines.
+                
+            .main_container
+                .main_title_out
+                    span.main_title 綠能環保
+            .makers_full_screen
+                .swiper-container
+                    .swiper-wrapper  
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_2_1.jpg", alt="") 
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_2_2.jpg", alt="") 
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_2_3.jpg", alt="") 
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_2_4.jpg", alt="") 
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_2_5.jpg", alt="")
+                    .swiper-pagination
+                    .swiper-button-prev.swiper-button-black
+                    .swiper-button-next.swiper-button-black
+            .main_container
+                .makers_container
+                    .makers_rol_6.top
+                        .main_icon Eco-friendly and Recyclable Materials
+                        span To cherish and respect nature, we include environmental protection in our corporate policy. In product development and manufacture, we use green energy, reduce emissions, and practice environmental protection.We produce products with wood from sustainable forestry ready for FSC-certified paper processing. We are also a member of the US National Hardwood Lumber Association (NHLA) to ensure all products are made of or with wood from afforestation in order to implement sustainable forest. We also invite consumers to be friendly to the environment.
+                    .makers_rol_6.top    
+                        .main_icon Eco-friendly Manufacture
+                        span To effectively use wood, we start from cutting wood in various basic forms for use at different stages of production to enhance yield rate and reduce wastage during processing. In addition, we color and coat wood products with water-based pigments to reduce pollution.
+            .main_container
+                .main_title_out
+                    span.main_title 堅持品質
+            .makers_full_screen
+                .swiper-container
+                    .swiper-wrapper  
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_3_1.jpg", alt="") 
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_3_2.jpg", alt="") 
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_3_3.jpg", alt="") 
+                    .swiper-pagination
+                    .swiper-button-prev.swiper-button-black
+                    .swiper-button-next.swiper-button-black
+            .main_container
+                .makers_container
+                    .makers_rol_6.top
+                        .main_icon Quality Insistence
+                        span We establish the material testing laboratory for strict quality control. The laboratory is operated in compliance with the ISO/IEC 17025 General requirements for the competence of testing and calibration laboratories to conduct physical and chemical tests on the content of eight types of heavy metals, ensure products contain no toxic substances, and assure the legal compliance of products.
+                        span.gray Legal compliance: US Consumer Product Safety Improvement Act (CPSIA)/ EU Restriction of Hazardous Substances Directive (RoHS)
+                    .makers_rol_6.top    
+                        .main_icon Laboratory Apparatus
+                        span X-ray Fluorescence Spectrometer (XRF): Testing eight types of heavy metals.
+                        span ICPS-7510 Inductively coupled plasma atomic emission spectrometer: Detection of eight heavy metals.
+                        span UV1800 Visible-Ultraviolet Spectrophotometer: Testing formaldehyde and hexavalent chromium.
+                        span GC-MS 2010 PIUS Gas Chromatography-Mass Spectrophotometer: Testing Phthalates 7P.
+            .main_container
+                .main_title_out
+                    span.main_title ISO Certification and Corporate Social Responsibility
+            .makers_full_screen
+                .swiper-container
+                    .swiper-wrapper  
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_4_1.jpg", alt="") 
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_4_2.jpg", alt="") 
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_4_3.jpg", alt="") 
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_4_4.jpg", alt="") 
+                        .swiper-slide
+                            img(src="~CH/desktop/makers/production/ph_4_5.jpg", alt="")
+                    .swiper-pagination
+                    .swiper-button-prev.swiper-button-black
+                    .swiper-button-next.swiper-button-black
+                span.text Shenzhen Factory and Xiamen Factory occupy a total area of 38,000m2 and with 2,000 workers, complying with the ISO standards.
+            .main_container
+                .makers_container
+                    .makers_rol_6.top
+                        .main_icon Quality
+                        span Implementing ISO 9001 Quality Management System: We emphasize management responsibilities, resources management, product realization, and analysis and improvement to realize high efficiency, quality services and quality products.
+                    .makers_rol_6.top    
+                        .main_icon Environment
+                        span Promoting ISO 14001 Environmental Management System: We pay attention to energy conservation, emissions reduction, environmental protection, and pollution prevention to provide employees with a good work environment and reduce environmental hazards and risks.
+                    .makers_rol_12.top    
+                        .main_icon Health and Safety
+                        span Promoting OHSAS 18001 Occupational Health and Safety Management System: We emphasize occupational safety prevention, hazard identification, and employee health management to protect employee health and occupational safety.
+            .makers_full_screen.gray
+                .main_container
+                    .makers_container.logo
+                        .makers_rol_6.top
+                            .logo.cti
+                            .logo_text
+                                a(href="/asset/img/CH/desktop/makers/production/gti_1.jpg" target="_blank").link
+                                    span.arrow 質量管理體系認証証書
+                                    span GB/T 19001-2008/ISO9001:2008
+                                a(href="/asset/img/CH/desktop/makers/production/gti_2.jpg" target="_blank").link
+                                    span.arrow 職業健康安全管理體系認証証書
+                                    span GB/T 28001-2011/OHSAS 18001:2007
+                                a(href="/asset/img/CH/desktop/makers/production/gti_3.jpg" target="_blank").link
+                                    span.arrow 環境管理體系認証証書
+                                    span GB/T24001-2004/ISO14001:2004
+                        .makers_rol_6.top
+                            .logo.sgs
+                            .logo_text
+                                a(href="/asset/img/CH/desktop/makers/production/sgs_1.jpg" target="_blank").link
+                                    span.arrow Chain-of-Custody
+                                    span SGSHK-COC-088730
+    include ./include/common/service.pug
+    +service("not_index")  
+    include ./include/common/fixed_service.pug

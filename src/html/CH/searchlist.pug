@@ -1,0 +1,64 @@
+extends _master.pug
+block head-append
+    title 
+    meta(property="og:title" content="")
+    meta(name="description" content="")
+    meta(property="og:description" content="")
+
+    script(src="/asset/js/searchlist.js" defer)
+    link(rel="stylesheet", href="/asset/css/catalog.css")
+
+block header
+    include ./include/master/header.pug
+    +header(['','','','','ON',''])
+
+block content-extend
+    include ./include/common/page_theme.pug
+    include ./include/common/page_select.pug
+    include ./include/master/makers_header.pug
+    //- include ./include/common/page_select.pug
+    .shoplist
+        +page_theme("BUYERS","客戶服務","background-image:url('${require(`../../img/CH/desktop/buyers/bg.jpg`)}')")
+        +page_select([['合作開發','/CH/customization.html',''],['經銷商專區','/CH/buyers.html','ON'],['線上音樂鈴試聽','','']],false)
+        +makers_header([['合作開發','/CH/customization.html',''],['經銷商專區','/CH/buyers.html','ON'],['線上音樂鈴試聽','http://59.120.39.177:8089/Login.aspx','','_blank']])
+        .main_content
+            .main_container.first_container
+                .main_title_out
+                    span.main_title 型錄下載
+                .main_wrap
+                    .main_icon 親愛的顧客您好,請選擇您要觀看的型錄
+                    .search.catalog
+                        input(type="text" placeholder="請搜尋關鍵字")
+                        a(href="javascript:;").icon
+                    .totle 搜尋結果：共
+                        span.count.red 99
+                        | 個項目
+                    a(href="javascript:;").log_out.red 登出
+                .download_list
+                    -for(var i = 0 ; i < 4; i++)
+                        a(href="javascript:;").data_info
+                            .icon.brand
+                            .name 品牌名稱
+                            .date 2017/01/01
+                    -for(var i = 0 ; i < 4; i++)
+                        a(href="javascript:;").data_info
+                            .icon.file
+                            .name 文件名稱
+                            .date 2017/01/01
+                    -for(var i = 0 ; i < 4; i++)
+                        a(href="javascript:;").data_info
+                            .icon.table
+                            .name 目錄名稱
+                            .date 2017/01/01
+                .btn_mobile
+                    a(href="javascript:;").more_btn.brown.catalog MORE
+                        .more_hover()
+                .pages
+                    a(href="javascript:;").last
+                    -for(var x=1; x <= 10; x++)
+                        a(href="javascript:;").page=x
+
+                    a(href="javascript:;").next
+    include ./include/common/service.pug
+    +service("not_index")  
+    include ./include/common/fixed_service.pug

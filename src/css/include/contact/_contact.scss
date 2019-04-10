@@ -1,0 +1,523 @@
+.direct_store_container {
+    width: 100%;
+    font-size: 0;
+    padding-bottom: 40px;
+    // @include lessThan($rwdL) {
+    //     padding-left: 20px;
+    //     box-sizing: border-box;
+    // }
+    .direct_store {
+        display: inline-block;
+        margin: 0 0 0 20px;
+        padding-bottom: 30px;
+        width: calc((100% - 40px) / 3);
+        vertical-align: top;
+        box-sizing: border-box;
+        // border: 1px solid red;
+        &:nth-child(3n +1) {
+            margin: 0;
+        }
+        @include lessThan($rwdL) {
+            width: 100%;
+            border-bottom: 1px dashed lightgray;
+            margin: 0 0 25px 0;
+            &:nth-child(3n +1) {
+                // margin: 0 0 0 20px;
+                margin: 0 0 25px 0;
+            }
+        }
+        &.shoplist {
+            padding-left: 20px;
+        }
+        .store_img {
+            width: 100%;
+            // height: 180px;
+            // background-position: center;
+            // background-size: cover;
+            margin-bottom: 15px;
+            @include lessThan($rwdL) {
+                display: none;
+            }
+        }
+        .store_name {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 20px;
+            margin: 10px 0;
+            @include lessThan($rwdL) {
+                font-size: 28px;
+                font-weight: 400;
+                line-height: 35px;
+                // margin-top: 35px;
+            }
+            &.business {
+                @include lessThan($rwdL) {
+                    position: relative;
+                    padding-left: 40px;
+                    &::before {
+                        content: '';
+                        display: block;
+                        width: 25px;
+                        height: 25px;
+                        position: absolute;
+                        top: 0px;
+                        left: 5px;
+                        background-image: url('~CH/desktop/newsdetail/icon.png');
+                        background-position: center;
+                        background-size: cover;
+                    }
+                }
+            }
+        }
+        .store_address {
+            font-size: 14px;
+            color: #797c7b;
+            line-height: 22px;
+            margin-bottom: 10px;
+            @include lessThan($rwdL) {
+                font-size: 24px;
+                line-height: 36px;
+                &.business {
+                    padding-left: 30px;
+                }
+            }
+        }
+        .store_info {
+            font-size: 14px;
+            color: #797c7b;
+            line-height: 20px;
+            position: relative;
+            @include lessThan($rwdL) {
+                font-size: 24px;
+                line-height: 36px;
+                &.business {
+                    padding-left: 30px;
+                    .title {
+                        left: 30px;
+                    }
+                }
+            }
+            .title {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: inline-block;
+                color: white;
+                width: 45px;
+                text-align: center;
+                font-weight: 200;
+                @include lessThan($rwdL) {
+                    font-size: 20px;
+                    width: 70px;
+                }
+            }
+            .blue {
+                background-color: #c8d7ea;
+            }
+            .text {
+                padding-left: 50px;
+                box-sizing: border-box;
+                &:nth-last-child(1) {
+                    margin-bottom: 8px;
+                }
+                @include lessThan($rwdL) {
+                    padding-left: 75px;
+                }
+            }
+        }
+        .map_icon {
+            color: #dd6356;
+            position: relative;
+            margin-left: 5px;
+            &::before {
+                content: '';
+                display: inline-block;
+                height: 13px;
+                width: 10px;
+                margin-right: 4px;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-image: url('~CH/desktop/shoplist/map_icon.png');
+                @include lessThan($rwdL) {
+                    width: 19px;
+                    height: 24px;
+                    // margin-left: 15px;
+                }
+            }
+            @at-root .desktop .direct_store_container .direct_store .map_icon {
+                @include moreThan($rwdL) {
+                    &:hover {
+                        &::before {
+                            background-image: url('~CH/desktop/shoplist/map_icon_hover.png');
+                        }
+                        &::after {
+                            width: 100%;
+                            transition: width 1s;
+                        }
+                    }
+                }
+            }
+            @include moreThan($rwdS) {
+                &:hover {
+                    &::before {
+                        background-image: url('~CH/desktop/shoplist/map_icon_hover.png');
+                    }
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 1px;
+                background-color: #dd6356;
+            }
+        }
+    }
+    .external {
+        width: 25%;
+        display: inline-block;
+        padding-bottom: 40px;
+        box-sizing: border-box;
+        position: relative;
+        @include lessThan($rwdL) {
+            width: 100%;
+            border-bottom: 1px dashed lightgray;
+            padding-bottom: 0;
+            line-height: 85px;
+            // padding-left: 25px;
+            letter-spacing: 1px;
+        }
+        .link {
+            font-size: 16px;
+            color: #797c7b;
+            &::after {
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 5px;
+                content: '';
+                width: 5px;
+                height: 5px;
+                transform: rotate(-45deg);
+                border-right: 2px solid #dd6356;
+                border-bottom: 2px solid #dd6356;
+            }
+            @include lessThan($rwdL) {
+                font-size: 28px;
+                display: inline-block;
+                height: 85px;
+                width: 100%;
+                padding-left: 25px;
+                &::after {
+                    width: 15px;
+                    height: 15px;
+                    position: absolute;
+                    top: 35px;
+                    right: 25px;
+                }
+            }
+            &.no_arrow {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+    .physical_outlet {
+        width: 100%;
+        height: auto;
+        padding: 10px 0;
+        background-image: url('~CH/desktop/shoplist/show_2.jpg');
+        margin-bottom: 35px;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include lessThan($rwdL) {
+            background-image: none;
+            margin-bottom: 0;
+        }
+        >span {
+            font-size: 16px;
+            line-height: 22px;
+            color: white;
+            letter-spacing: 1px;
+            @include lessThan($rwdL) {
+                font-size: 28px;
+                line-height: 40px;
+                color: #5b5b59;
+                display: inline-block;
+                width: 100%;
+            }
+        }
+    }
+    .world_map {
+        width: 100%;
+        // height: 565px;
+    }
+    .description {
+        font-size: 20px;
+        line-height: 22px;
+        letter-spacing: 2px;
+        font-weight: 600;
+        margin: 25px 0;
+        @include lessThan($rwdL) {
+            font-size: 28px;
+            line-height: 40px;
+        }
+    }
+    .place {
+        font-size: 16px;
+        line-height: 36px;
+        position: relative;
+        @include lessThan($rwdL) {
+            font-size: 24px;
+            line-height: 48px;
+            color: #797c7b;
+        }
+        >div {
+            display: inline-block;
+        }
+        .place_name {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 75px;
+            font-weight: 600;
+            @include lessThan($rwdL) {
+                width: 95px;
+                font-weight: 400;
+            }
+        }
+        .place_country {
+            padding-left: 75px;
+            box-sizing: border-box;
+            color: #797c7b;
+            letter-spacing: 4px;
+            width: 100%;
+            word-wrap: break-word;
+            @include lessThan($rwdL) {
+                padding-left: 95px;
+            }
+        }
+    }
+    &.space_between {
+        display: flex;
+        justify-content: space-between;
+        @include lessThan($rwdL) {
+            display: block;
+            justify-content: flex-start;
+        }
+    }
+    .left_space {
+        width: 50%;
+        box-sizing: border-box;
+        // border: 1px solid red;
+        font-size: 20px;
+        height: 730px;
+        line-height: 36px;
+        text-align: center;
+        color: white;
+        background-position: center;
+        background-size: cover;
+        padding: 0 50px;
+        &.business {
+            background-image: url('~CH/desktop/business/show_1.jpg');
+            @include lessThan($rwdL) {
+                background-image: none;
+                height: auto;
+            }
+        }
+        &.contact {
+            background-image: url('~CH/desktop/contact/show_1.jpg');
+            @include lessThan($rwdL) {
+                background-image: none;
+                height: auto;
+            }
+        }
+        &.buyers {
+            height: 330px;
+            background-image: url('~CH/desktop/buyers/show_1.jpg');
+            @include lessThan($rwdL) {
+                background-image: none;
+                height: 0;
+            }
+        }
+        @include lessThan($rwdL) {
+            width: 100%;
+            text-align: left;
+            padding: 0 0 20px 0;
+        }
+        .text {
+            position: relative;
+            &.mobile {
+                display: none;
+                color: black;
+                padding-left: 50px;
+                font-size: 28px;
+                line-height: 40px;
+                vertical-align: middle;
+            }
+            &.desktop {
+                letter-spacing: 2px;
+                display: block;
+                box-sizing: border-box;
+                &:nth-child(1) {
+                    padding-top: 65px;
+                }
+            }
+            &.icon {
+                position: absolute;
+                top: 6px;
+                left: 5px;
+                display: none;
+                width: 23px;
+                height: 23px;
+                background-position: center;
+                background-size: cover;
+                background-image: url('~CH/desktop/newsdetail/icon.png');
+            }
+            @include lessThan($rwdL) {
+                &.mobile {
+                    display: block;
+                }
+                &.desktop {
+                    display: none;
+                }
+                &.icon {
+                    display: block;
+                }
+            }
+        }
+        // .text {}
+    }
+    .right_space {
+        width: 50%;
+        box-sizing: border-box;
+        // border: 1px solid black;
+        position: relative;
+        font-size: 20px;
+        padding-left: 35px;
+        @include lessThan($rwdL) {
+            width: 100%;
+            padding-left: 0;
+        }
+        >* {
+            margin-bottom: 10px;
+            @include lessThan($rwdL) {
+                margin-bottom: 20px;
+            }
+        }
+        >textarea {
+            width: 100%;
+            height: 155px;
+            padding: 15px;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 1px;
+            box-sizing: border-box;
+            border: 1px solid #c8c0bc;
+            resize: no;
+            color: #a79b94;
+            @include lessThan($rwdL) {
+                height: 175px;
+                font-size: 24px;
+                line-height: 36px;
+            }
+            &:focus {
+                outline-width: 0;
+            }
+        }
+        input {
+            width: 100%;
+            height: 45px;
+            border: 1px solid #c8c0bc;
+            font-size: 16px;
+            padding-left: 15px;
+            line-height: 22px;
+            letter-spacing: 1px;
+            box-sizing: border-box;
+            color: #a79b94;
+            @include lessThan($rwdL) {
+                height: 80px;
+                font-size: 20px;
+            }
+            &:focus {
+                outline-width: 0;
+            }
+        }
+        .gender {
+            font-size: 0;
+        }
+        .select_gender {
+            display: inline-block;
+            width: 125px;
+            vertical-align: top;
+            @include lessThan($rwdL) {
+                width: 180px;
+            }
+        }
+        .input_gender {
+            display: inline-block;
+            width: calc(100% - 125px);
+            vertical-align: top;
+            box-sizing: border-box;
+            padding-right: 10px;
+            @include lessThan($rwdL) {
+                width: calc(100% - 180px);
+            }
+        }
+        .rule_text {
+            font-size: 14px;
+            line-height: 22px;
+            color: #c8c0bc;
+            @include lessThan($rwdL) {
+                font-size: 20px;
+                line-height: 30px;
+            }
+            &.red {
+                color: #f2877c;
+            }
+        }
+    }
+    .vcode {
+        font-size: 0;
+        img {
+            height: 45px;
+            width: 145px;
+            vertical-align: top;
+            @include lessThan($rwdL) {
+                height: 80px;
+                width: 195px;
+            }
+        }
+        input {
+            width: 170px;
+            vertical-align: top;
+            box-sizing: border-box;
+            margin: 0 15px;
+            @include lessThan($rwdL) {
+                width: 230px;
+            }
+        }
+        a.update {
+            color: #80a6d1;
+            text-decoration: underline;
+            font-size: 14px;
+            line-height: 45px;
+            letter-spacing: 1.5px;
+            @include lessThan($rwdL) {
+                font-size: 24px;
+                line-height: 60px;
+            }
+        }
+    }
+}

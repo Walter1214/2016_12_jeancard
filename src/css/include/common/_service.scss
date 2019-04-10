@@ -1,0 +1,89 @@
+.service {
+    padding: 70px 0 60px 0;
+    background-color: #e9e6e4;
+    position: relative;
+    z-index: 20;
+    &.not_index{
+        display: none;
+        @include lessThan($rwdL) {
+            display: block;
+        }
+    }
+    .wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .container {
+            width: 100%;
+            text-align: center;
+            .service_more {
+                display: inline-block;
+                width: 705px;
+                height: 70px;
+                line-height: 70px;
+                font-size: 20px;
+                color: #707372;
+                vertical-align: middle;
+                @include lessThan($rwdXL) {
+                    width: 485px;
+                }
+                // @include lessThan($rwdX) {
+                //     width: 485px;
+                // }
+                @include lessThan($rwdL) {
+                    width: 290px;
+                    font-size: 24px;
+                    &:first-child {
+                        margin-right: 15px;
+                    }
+                }
+                &:first-child {
+                    margin-right: 10px;
+                }
+                &:hover {
+                    border: 1px solid #7ba4db;
+                    background-color: rgba(123, 164, 218, 0.3);
+                    &.business {
+                        &::before {
+                            background-image: url('~CH/desktop/index/service/business_btn_hover.png');
+                        }
+                    }
+                    &.customized {
+                        &::before {
+                            background-image: url('~CH/desktop/index/service/customized_btn_hover.png');
+                        }
+                    }
+                }
+                &.business {
+                    &::before {
+                        content: '';
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        padding: 0 15px;
+                        margin-bottom: 5px;
+                        vertical-align: middle;
+                        display: inline-block;
+                        background-image: url('~CH/desktop/index/service/business_btn.png');
+                        width: 21px;
+                        height: 21px;
+                    }
+                }
+                &.customized {
+                    &::before {
+                        content: '';
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        padding: 0 15px;
+                        margin-bottom: 5px;
+                        vertical-align: middle;
+                        display: inline-block;
+                        background-image: url('~CH/desktop/index/service/customized_btn.png');
+                        width: 21px;
+                        height: 21px;
+                    }
+                }
+            }
+        }
+    }
+}

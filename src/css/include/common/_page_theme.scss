@@ -1,0 +1,62 @@
+.page_theme_out {
+    height: 400px;
+    width: 100%;
+    margin-top: -70px;
+    background-color: black;
+    @include lessThan($rwdL) {
+        height: 250px;
+    }
+    .page_theme {
+        height: 400px;
+        width: 100%;
+        z-index: 10;
+        position: relative;
+        left: 0;
+        top: 0;
+        background-color: #eae6e5;
+        // background-image: url('~CH/desktop/brand/bg.jpg');
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 60px;
+        box-sizing: border-box;
+        color: white;
+        @include lessThan($rwdL) {
+            height: 250px;
+        }
+        .title {
+            font-size: 50px;
+            font-weight: 100;
+            letter-spacing: 10px;
+            @include lessThan($rwdL) {
+                font-size: 40px;
+            }
+        }
+        .color {
+            height: 4px;
+            font-size: 0;
+            padding: 25px 0 40px 0;
+            text-align: center;
+            @include lessThan($rwdL) {
+                padding: 20px 0;
+            }
+            div {
+                // margin-right: -4px;
+                display: inline-block;
+                height: 4px;
+                width: 18px;
+            }
+        }
+        .title_2 {
+            font-size: 38px;
+            font-weight: 300;
+            letter-spacing: 5px;
+            @include lessThan($rwdL) {
+                font-size: 30px;
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+mixin header(arr)
+    .header
+        .wrap
+            a(href="/EN/index.html", class="logo")
+                img(src="~CH/desktop/header/logo.png", alt="") 
+            ul
+                li
+                    a(href="/EN/news.html" title="title" class=arr[0]) News
+                li
+                    a(href="/EN/about.html" title="title" class=arr[1]) About
+                li
+                    a(href="/EN/design.html" title="title" class=arr[2]) Innovation
+                li
+                    a(href="/EN/brand.html" title="title" class=arr[3]) Brand
+                li
+                    a(href="/EN/customization.html" title="title" class=arr[4]) Customer
+                        |</br> Service
+                li
+                    a(href="/EN/shoplist.html" title="title" class=arr[5]) Contact
+            .links
+                a.shopping_cart(href="javascript:;") SHOP
+                a.CH.ON(href="javascript:;") CH
+                a.EN(href="javascript:;") EN
+            a(href="javascript:;").cross
+            .lines
+                .line
+                .line
+                .line
+            .list_out
+                .list
+                    a(href="/EN/news.html") News
+                    a(href="/EN/about.html") About
+                    a(href="/EN/design.html") Innovation
+                    a(href="/EN/brand.html") Brand
+                    a(href="/EN/customization.html") Customer Service
+                    a(href="/EN/shoplist.html") Contact
+                    .mobile_links
+                        a.shopping_cart(href="javascript:;") SHOP
+                        a.CH.ON(href="javascript:;") CH
+                        a.EN(href="javascript:;") EN

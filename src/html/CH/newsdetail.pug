@@ -1,0 +1,108 @@
+extends _master.pug
+block head-append
+    title {文章標題}｜知音文創 Jean Cultural & Creative Co., Ltd.
+    meta(property="og:title" content="{文章標題}｜知音文創 Jean Cultural & Creative Co., Ltd.")
+    meta(name="description" content="知音文創最新消息 | {文章標題}")
+    meta(property="og:description" content="知音文創最新消息 | {文章標題}")
+
+    link(rel='stylesheet', href="/asset/lib/swiper/swiper.min.css")
+    script(src="/asset/lib/swiper/swiper.min.js" defer)
+
+    script(src="/asset/js/newsdetail.js" defer)
+    link(rel="stylesheet", href="/asset/css/newsdetail.css")
+
+block header
+    include ./include/master/header.pug
+    +header(['ON','','','','',''])
+
+block content-extend
+    include ./include/common/page_theme.pug
+    
+    .newsdetail
+        +page_theme("NEWS&EVENTS","最新消息","background-image:url('${require(`../../img/CH/desktop/news/bg.jpg`)}')")
+
+        .content
+            .container
+                .report_title_out
+                    .report_title
+                        .date(style="background-color: #316db5;")
+                            .year 2016
+                            .month_day 11.16
+                        .object
+                            span 企業動態
+                            h1 Wooderful life DIY 巡迴展-太古誠品
+                        .external_links
+                            a(href="javascript:;").fb
+                            a(href="javascript:;").line
+                .report_content
+                    //- .report_img(style="background-image:url('${require(`../../img/CH/desktop/newsdetail/show_1.jpg`)}')")\
+                    img(src="~CH/desktop/newsdetail/show_1.jpg", alt="").report_img
+                    h1 誠品綠園道書店『Wooderful life X 森音派對』DIY音樂鈴展
+                    span.top_20.down_20 近千種木製零件可供搭配，幾個簡單組裝步驟，一起來完成專屬的木製禮品吧！近千種木製零件可供搭配，幾個簡單組裝步驟，一起來完成專屬的木製禮品吧！
+                    p.red 《滿額禮》
+                    p 活動期間，凡購買Wooderful life商品，當筆結帳金額滿1500元，隨機贈送限定木製零件乙個。
+                    p.small.down_20 ※ 贈品恕不累送，數量有限‧送完為止。
+                    p.green 《打卡禮》
+                    p 每日限量十個名額，凡於instagram/facebook
+                    p 打卡分享DIY作品，即贈送神祕生活木小物。
+                    strong asdfasdfadfasdf你我他
+                    em test你我他
+                    ul
+                        li 
+                            p test pns 你你你
+                        li 
+                            p test pns 你你你
+                        li 
+                            p test pns 你你你
+                        li 
+                            p test pns 你你你                                                        
+                    ol
+                        li test pns 你你你
+                        li test pns 你你你
+                        li test pns 你你你
+                        li test pns 你你你
+                    .swiper-container.show_list
+                        .swiper-wrapper
+                            //- .swiper-slide.show(style="background-image:url('${require(`../../img/CH/desktop/newsdetail/show_2.jpg`)}')")
+                            .swiper-slide
+                                img(src="~CH/desktop/newsdetail/show_2.jpg")
+                            .swiper-slide
+                                img(src="~CH/desktop/newsdetail/show_2.jpg")
+                            .swiper-slide
+                                img(src="~CH/desktop/newsdetail/show_2.jpg")
+                        .swiper-pagination
+                        .swiper-button-next.swiper-button-white
+                        .swiper-button-prev.swiper-button-white
+                    .video_conten
+                        .video_out
+                            .video.entry-content
+                                iframe(height="331" width="500" src="http://www.flickr.com/photos/julia00_sky/11222202153/player/" frameborder="0" class="rlk-autosize rlk-fullwidth" allowfullscreen)
+                    .video_conten
+                        .icon 相關影片
+                        .video_out
+                            .video
+                                iframe(width="560" height="315" src="https://www.youtube.com/embed/LoE-mdeLwSY?list=PLKBVCTnpBpFS98hdyyDpxx3DfH9X6MbTA" frameborder="0" allowfullscreen)
+            .report_change_out
+                .report_change
+                    .setting.left
+                        .page
+                            .last_page.OFF
+                                .left_text 上一篇
+                                .img(style="background-image:url('${require(`../../img/CH/desktop/newsdetail/show_2.jpg`)}')")
+                                include ./include/common/pub_title.pug
+                            a(href="javascript:;").more_btn.brown.w_240_h_135 回列表頁
+                                .more_hover
+                    .setting.right
+                        .page
+                            .next_page
+                                .right_text 下一篇
+                                .img(style="background-image:url('${require(`../../img/CH/desktop/newsdetail/show_2.jpg`)}')")
+                                include ./include/common/pub_title.pug
+                            a(href="javascript:;").more_btn.brown.w_240_h_135.OFF 回列表頁
+                                .more_hover
+                            
+
+    include ./include/common/service.pug
+    +service("not_index")  
+    include ./include/common/fixed_service.pug
+     
