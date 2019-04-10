@@ -1,8 +1,7 @@
 # 知音文創
 
 * 主機：客戶端
-* 米蘭測試機：210.65.89.161
-* remote：http://jeancard.medialand.com.tw/CH/
+* 官網網址：http://www.jeancard.com/
 
 # template for nodejs 6.x
 
